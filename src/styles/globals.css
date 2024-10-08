@@ -9,46 +9,19 @@ html, body {
     margin: 0;
 }
 
-.tile-hover-line:nth-child(1)::before,
-.tile-hover-line:nth-child(2)::before,
-.tile-hover-line:nth-child(3)::before,
-.tile-hover-line:nth-child(4)::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 2px;
-    background-color: yellow;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.tile-hover-line:nth-child(1)::before {
-    top: 15px;
-    left: 15px;
-    transform: translate(-50%, -50%);
+.animate-fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0; /* Ensure elements are hidden initially */
 }
 
-.tile-hover-line:nth-child(2)::before {
-    top: 15px;
-    right: 15px;
-    transform: translate(50%, -50%);
-}
-
-.tile-hover-line:nth-child(3)::before {
-    bottom: 15px;
-    left: 15px;
-    transform: translate(-50%, 50%);
-}
-
-.tile-hover-line:nth-child(4)::before {
-    bottom: 15px;
-    right: 15px;
-    transform: translate(50%, 50%);
-}
-
-.tile-hover-effect:hover .tile-hover-line:nth-child(1)::before,
-.tile-hover-effect:hover .tile-hover-line:nth-child(2)::before,
-.tile-hover-effect:hover .tile-hover-line:nth-child(3)::before,
-.tile-hover-effect:hover .tile-hover-line:nth-child(4)::before {
-    opacity: 1;
-}

@@ -17,7 +17,8 @@ var config = {
             },
             colors: {
                 primaryYellow: '#fbff12', // Main bright yellow
-                lightGray: '#f8f8f8'
+                lightGray: '#f8f8f8',
+                darkBlue: '#111317'
             },
         },
     },

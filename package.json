@@ -17,6 +17,7 @@
     "postcss-import": "^16.1.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-intersection-observer": "^9.13.1",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
