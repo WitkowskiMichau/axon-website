@@ -2,23 +2,31 @@
 import Link from 'next/link';
 
 interface TileProps {
-  title: string;
-  description: string;
-  icon: string;
-  id: string;
-  url?: string;
+    title: string;
+    description: string;
+    icon: string;
+    id: string;
+    url?: string;
 }
 
-const Tile = ({ title, description, icon, id, url }: TileProps) => {
-  return (
-    <Link href={`/${url}`}>
-      <div className="cursor-pointer bg-black shadow-md rounded-lg p-6 text-left flex flex-col justify-between border border-gray-200 transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl h-56 w-72">
-        <img src={icon} alt={title} className="mx-auto mb-4 w-16 h-16" />
-        <h3 className="text-xl text-white">{title}</h3>
-        <p className="text-gray-300 mb-4 text-xs">{description}</p>
-      </div>
-    </Link>
-  );
+const Tile = ({title, description, icon, id, url}: TileProps) => {
+    return (
+        <Link href={`/${url}`}>
+            <div className="relative cursor-pointer bg-black p-0 rounded-lg transition-transform duration-300 ease-in-out hover:shadow-xl h-64 w-80 tile-hover-effect">
+                <div className="bg-black rounded-lg p-6 text-left flex flex-col justify-center items-center h-full w-full">
+                    <img src={icon} alt={title} className="mb-8 w-16 h-16"/>
+                    <h3 className="text-lg text-center text-primaryYellow font-russo">{title}</h3>
+                    <p className="text-gray-300 mb-4 text-s text-center pt-2">{description}</p>
+                </div>
+                <div className="absolute inset-0">
+                    <div className="tile-hover-line"></div>
+                    <div className="tile-hover-line"></div>
+                    <div className="tile-hover-line"></div>
+                    <div className="tile-hover-line"></div>
+                </div>
+            </div>
+        </Link>
+    );
 };
 
 export default Tile;

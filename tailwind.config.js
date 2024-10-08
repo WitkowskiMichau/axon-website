@@ -8,13 +8,16 @@ var config = {
     ],
     theme: {
         extend: {
+            boxShadow: {
+                'top': '0 -4px 6px -1px rgba(0, 0, 0, 0.1), 0 -2px 4px -1px rgba(0, 0, 0, 0.06)',
+            },
+            fontFamily: {
+                jost: ['Jost', 'sans-serif'],
+                russo: ['Russo One', 'sans-serif'],
+            },
             colors: {
                 primaryYellow: '#fbff12', // Main bright yellow
-                darkGray: '#1C1C1E', // Dark gray for background
-                warmGray: '#636363', // Neutral gray for text
-                paleYellow: '#F8F399', // Soft yellow accent
-                navyBlue: '#002855', // Contrasting navy blue
-                lightBlue: '#8EC8E8', // Secondary light blue accent
+                lightGray: '#f8f8f8'
             },
         },
     },
