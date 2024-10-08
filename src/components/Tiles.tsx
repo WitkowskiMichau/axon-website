@@ -109,7 +109,7 @@ const Tiles = () => {
   return (
     <main className="container mx-auto py-8 flex-grow">
       <div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-[0.05rem] justify-items-center">
+        className="font-jost grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-[0.05rem] justify-items-center">
         {tiles.map((tile) => (
           <Tile key={tile.id} id={tile.id} title={tile.title} description={tile.description} icon={tile.icon} url={tile.url}/>
         ))}
