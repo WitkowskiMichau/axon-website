@@ -2,6 +2,10 @@
   "name": "axon",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  },
   "scripts": {
     "build:tailwind": "tsc tailwind.config.ts --outDir .",
     "build": "next build",

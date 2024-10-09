@@ -10,7 +10,7 @@ export const tiles = [
     },
     {
         id: 'free-to-paid-conversion',
-        title: 'Free to Paid users Conversion',
+        title: 'Free to Paid users',
         description: 'hone your product to convert more',
         icon: Abacus.src,
         url: 'subscribe-to-beta'
@@ -46,14 +46,14 @@ export const tiles = [
     },
     {
         id: 'customer-base-segmentation',
-        title: 'Customer base Segmentation',
+        title: 'Customer Segmentation',
         description: 'learn how to drive more expansion revenue',
         icon: Abacus.src,
         url: 'subscribe-to-beta'
     },
     {
         id: 'understand-buying-personas',
-        title: 'Understand your Buying Personas',
+        title: 'Understand your Personas',
         description: 'adjust your sales play to your recipients',
         icon: Abacus.src,
         url: 'subscribe-to-beta'

@@ -1,7 +1,7 @@
 // src/components/Header.tsx
 const MovieSection = () => {
     return (
-        <div className='bg-black shadow-top'>
+        <div className='bg-darkBlue shadow-top'>
             <section className="container py-12 text-center mx-auto">
                 <p className="text-3xl  text-primaryYellow mb-6 font-russo">
                     Upload your data file or connect your CRM / User Data and Axon will help you <br/> understand what
