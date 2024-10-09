@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 interface FAQItemProps {
     question: string;
-    answer: string;
 }
 
-const FAQItem = ({ question, answer }: FAQItemProps) => {
+const FAQItem = ({question}: FAQItemProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleAnswer = () => {

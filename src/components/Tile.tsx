@@ -1,14 +1,12 @@
 import React from 'react';
 
 interface TileProps {
-    id: string;
     title: string;
     description: string;
     icon: string;
-    url: string;
 }
 
-const Tile: React.FC<TileProps> = ({ id, title, description, icon, url }) => {
+const Tile: React.FC<TileProps> = ({title, description, icon }) => {
     return (
         <div className="relative cursor-pointer bg-black p-0 rounded-lg transition-transform duration-300 ease-in-out hover:shadow-xl h-64 w-80 tile-hover-effect hover:scale-101 hover:shadow-[0_0_0_4px_rgba(255,255,0,1)]">
             <div className="border-primaryYellow border-2 border-opacity-25 bg-black rounded-lg p-6 text-left flex flex-col justify-center items-center h-full w-full hover:border-4 hover:border-opacity-100 transition-all duration-300">
