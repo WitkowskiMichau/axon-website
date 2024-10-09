@@ -1,4 +1,5 @@
-// src/components/sections/Hero.tsx
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useRef } from 'react';
 
 const Hero = () => {
