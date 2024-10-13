@@ -1,4 +1,3 @@
-/* src/styles/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,6 +6,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    background-color: #000; /* Ensure the background is dark */
 }
 
 @keyframes fadeInUp {
@@ -25,3 +25,18 @@ html, body {
     opacity: 0; /* Ensure elements are hidden initially */
 }
 
+@keyframes colorChange {
+    0%, 100% {
+        color: #00BFFF; /* 90s blue */
+    }
+    50% {
+        color: #FF69B4; /* 90s pink */
+    }
+}
+
+.animate-colorChange {
+    animation: colorChange 5s infinite;
+}
+.shadow-bright {
+    box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
+}

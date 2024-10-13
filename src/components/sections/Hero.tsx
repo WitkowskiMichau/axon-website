@@ -7,9 +7,11 @@ const Hero = () => {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
+                    const target = entry.target as HTMLElement;
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('animate-fadeInUp');
-                        observer.unobserve(entry.target);
+                        target.style.opacity = '1';
+                        target.classList.add('animate-fadeInUp');
+                        observer.unobserve(target);
                     }
                 });
             },
@@ -29,11 +31,11 @@ const Hero = () => {
 
     return (
         <div className='bg-black'>
-            <section ref={heroRef} className="container py-12 text-center mx-auto opacity-0">
-                <h2 className="text-5xl font-bold mb-6 font-russo text-primaryYellow animate-initialJump">
+            <section ref={heroRef} className="container py-12 text-center mx-auto" style={{ opacity: 0, marginTop: '4rem' }}>
+                <h2 className="mt-20 text-5xl font-bold mb-6 font-russo text-90sBlue animate-colorChange">
                     Never miss your revenue quota using all world's largest LLMs.
                 </h2>
-                <p className="text-2xl text-primaryYellow font-jost animate-pulse">
+                <p className="text-2xl text-primaryYellow font-jost">
                     Upload your data or connect your data source and Axon will analyse, present <br />
                     and find actionable plan for you. We don't use data externally in any shape or form.
                 </p>

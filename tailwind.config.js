@@ -21,7 +21,10 @@ var config = {
             colors: {
                 primaryYellow: '#fbff12', // Main bright yellow
                 lightGray: '#f8f8f8',
-                darkBlue: '#111317'
+                darkBlue: '#111317',
+                '90s-blue': '#00BFFF',
+                '90s-pink': '#FF69B4',
+                'primary-yellow': '#FFD700',
             },
         },
     },
