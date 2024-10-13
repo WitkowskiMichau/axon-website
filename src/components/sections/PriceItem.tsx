@@ -1,12 +1,8 @@
-interface PriceItemProps {
-    title: string;
-    price: string;
-    features: string[];
-}
+import {PriceItemProps} from "@/components/Types";
 
 const PriceItem = ({ title, price, features }: PriceItemProps) => {
     return (
-        <div className="bg-black rounded-lg p-6 w-80 border-primaryYellow border-2 border-opacity-25">
+        <div className="cursor-pointer bg-black rounded-lg p-6 w-80 border-primaryYellow border-2 border-opacity-25 transform transition-transform duration-300 hover:translate-y-[-10px] hover:scale-105 hover:shadow-lg">
             <h3 className="text-2xl font-russo text-white mb-4">{title}</h3>
             <p className="text-xl text-primaryYellow mb-4">{price}</p>
             <ul className="text-left text-gray-300 mb-4">

@@ -15,6 +15,9 @@ var config = {
                 jost: ['Jost', 'sans-serif'],
                 russo: ['Russo One', 'sans-serif'],
             },
+            lineHeight: {
+                'extra-tight': '0.7',
+            },
             colors: {
                 primaryYellow: '#fbff12', // Main bright yellow
                 lightGray: '#f8f8f8',

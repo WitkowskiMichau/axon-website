@@ -3,9 +3,9 @@ import PriceItem from "@/components/sections/PriceItem";
 
 const Pricing = () => {
     return (
-        <div className='bg-darkBlue'>
+        <div className='bg-white shadow-lg'>
             <section className="container py-12 mx-auto">
-                <div className="bg-white p-8 rounded-lg shadow-lg pb-24">
+                <div className="pb-24">
                     <h2 className="text-4xl font-russo text-darkBlue mb-8 text-center">Pricing Plans</h2>
                     <div className="flex flex-wrap justify-center gap-8">
                         <PriceItem

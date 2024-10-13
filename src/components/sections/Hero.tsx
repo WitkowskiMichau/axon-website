@@ -1,5 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable react/no-unescaped-entities */
 import { useEffect, useRef } from 'react';
 
 const Hero = () => {
@@ -30,12 +28,12 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className='bg-darkBlue'>
+        <div className='bg-black'>
             <section ref={heroRef} className="container py-12 text-center mx-auto opacity-0">
-                <h2 className="text-3xl font-light mb-6 font-russo text-primaryYellow">
+                <h2 className="text-5xl font-bold mb-6 font-russo text-primaryYellow animate-initialJump">
                     Never miss your revenue quota using all world's largest LLMs.
                 </h2>
-                <p className="text-xl text-brightYellow font-jost text-white">
+                <p className="text-2xl text-primaryYellow font-jost animate-pulse">
                     Upload your data or connect your data source and Axon will analyse, present <br />
                     and find actionable plan for you. We don't use data externally in any shape or form.
                 </p>
