@@ -77,3 +77,35 @@ html, body {
 .hover\:border-shine:hover {
     animation: borderShine 2s infinite;
 }
+
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-top {
+    animation: fadeInTop 1s ease-out forwards;
+    opacity: 0; /* Ensure elements are hidden initially */
+}
+
+@keyframes borderShine {
+    0% {
+        border-color: #FF69B4; /* Pink */
+    }
+    50% {
+        border-color: #00BFFF; /* Blue */
+    }
+    100% {
+        border-color: #FF69B4; /* Pink */
+    }
+}
+
+.hover\:border-shine:hover {
+    animation: borderShine 2s infinite;
+}
