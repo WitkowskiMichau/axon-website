@@ -3,3 +3,8 @@ export interface PriceItemProps {
     price: string;
     features: string[];
 }
+export interface TileProps {
+    title: string;
+    description: string;
+    icon: string;
+}

@@ -37,6 +37,13 @@ html, body {
 .animate-colorChange {
     animation: colorChange 5s infinite;
 }
+
 .shadow-bright {
     box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
+}
+
+.tile-hover-effect:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    border-image: linear-gradient(to right, #FF69B4, #00BFFF) 1;
 }
