@@ -3,7 +3,7 @@ import { tiles } from "@/consts";
 
 const Tiles = () => {
     return (
-        <div className='bg-darkBlue'>
+        <div className="bg-gradient-to-b from-gray-900 to-darkBlue animate-fadeInUp">
             <section className="container py-12 text-center mx-auto">
                 <main className="flex-grow">
                     <div className="font-jost flex flex-wrap custom-gap gap-2 items-center">
