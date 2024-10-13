@@ -106,6 +106,11 @@ html, body {
     }
 }
 
-.hover\:border-shine:hover {
-    animation: borderShine 2s infinite;
+
+.price-item-hover-effect {
+    cursor: pointer;
+}
+
+.price-item-hover-effect:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.3);
 }

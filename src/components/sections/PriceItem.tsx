@@ -1,13 +1,13 @@
-import {PriceItemProps} from "@/components/Types";
+import React from "react";
 
-const PriceItem = ({ title, price, features }: PriceItemProps) => {
+const PriceItem = ({ title, price, features }) => {
     return (
-        <div className="cursor-pointer bg-black rounded-lg p-6 w-80 border-primaryYellow border-2 border-opacity-25 transform transition-transform duration-300 hover:translate-y-[-10px] hover:scale-105 hover:shadow-lg">
-            <h3 className="text-2xl font-russo text-white mb-4">{title}</h3>
-            <p className="text-xl text-primaryYellow mb-4">{price}</p>
-            <ul className="text-left text-gray-300 mb-4">
+        <div className="price-item-hover-effect p-6 bg-white rounded-lg shadow-md">
+            <h3 className="text-2xl font-bold mb-4">{title}</h3>
+            <p className="text-xl mb-4">{price}</p>
+            <ul className="list-disc list-inside">
                 {features.map((feature, index) => (
-                    <li key={index} className="mb-2">- {feature}</li>
+                    <li key={index}>{feature}</li>
                 ))}
             </ul>
         </div>
