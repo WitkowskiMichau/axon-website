@@ -39,7 +39,6 @@ const FAQItem: React.FC<FAQItemProps> = ({ question }) => {
         <div
             ref={ref}
             className={`mb-4 ${isVisible ? 'animate-fade-in' : ''}`}
-            style={{ animationDelay: `${isOpen ? 0 : 0.2}s` }}
         >
             <h3
                 className={`text-2xl font-russo cursor-pointer transition-colors duration-500 ${
@@ -51,7 +50,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question }) => {
             </h3>
             <div
                 className={`overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out ${
-                    isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+                    isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                 }`}
             >
                 <p className="text-lg text-gray-300 mt-4">
