@@ -52,7 +52,7 @@ const Pricing = () => {
                             <PriceItem
                                 key={index}
                                 title={plan.title}
-                                price={plan.price}
+                                price={Number(plan.price)}  // Convert to number
                                 features={plan.features}
                                 index={index}
                             />
