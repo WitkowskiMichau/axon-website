@@ -46,13 +46,13 @@ const Pricing = () => {
         <div className='bg-gradient-to-b from-gray-900 to-darkBlue shadow-lg'>
             <section className="container py-12 mx-auto">
                 <div className="pb-24">
-                    <h2 className="text-4xl font-russo text-primaryYellow mb-8 text-center">Pricing Plans</h2>
+                    <h2 className="text-4xl font-russo text-primaryYellow mb-16 mt-16 text-center">Pricing Plans</h2>
                     <div className="flex flex-wrap justify-center gap-8">
                         {pricingPlans.map((plan, index) => (
                             <PriceItem
                                 key={index}
                                 title={plan.title}
-                                price={Number(plan.price)}  // Convert to number
+                                price={plan.price}
                                 features={plan.features}
                                 index={index}
                             />
