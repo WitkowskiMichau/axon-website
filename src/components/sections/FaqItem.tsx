@@ -2,44 +2,26 @@ import React, { useRef, useEffect, useState } from "react";
 
 interface FAQItemProps {
     question: string;
+    answer: string;
 }
 
-const FAQItem: React.FC<FAQItemProps> = ({ question }) => {
+const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
     const [isOpen, setIsOpen] = useState(false);
     const ref = useRef<HTMLDivElement>(null);
-    const [isVisible, setIsVisible] = useState(false);
+    const [height, setHeight] = useState("0px");
 
     const toggleAnswer = () => {
         setIsOpen(!isOpen);
     };
 
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                    observer.disconnect();
-                }
-            },
-            { threshold: 0.1 }
-        );
-
         if (ref.current) {
-            observer.observe(ref.current);
+            setHeight(isOpen ? `${ref.current.scrollHeight}px` : "0px");
         }
-
-        return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
-            }
-        };
-    }, []);
+    }, [isOpen]);
 
     return (
-        <div
-            ref={ref}
-            className={`mb-4 ${isVisible ? 'animate-fade-in' : ''}`}
-        >
+        <div className="mb-4">
             <h3
                 className={`text-2xl font-russo cursor-pointer transition-colors duration-500 ${
                     isOpen ? 'bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent' : 'text-white'
@@ -49,12 +31,12 @@ const FAQItem: React.FC<FAQItemProps> = ({ question }) => {
                 {question}
             </h3>
             <div
-                className={`overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out ${
-                    isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                }`}
+                ref={ref}
+                className="overflow-hidden transition-[height,opacity] duration-500 ease-in-out"
+                style={{ height, opacity: isOpen ? 1 : 0 }}
             >
                 <p className="text-lg text-gray-300 mt-4">
-                    {isOpen && "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."}
+                    {answer}
                 </p>
             </div>
         </div>

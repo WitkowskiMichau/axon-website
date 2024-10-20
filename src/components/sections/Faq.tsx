@@ -16,7 +16,7 @@ const FAQ = () => {
                 <h2 className="text-4xl font-russo text-primaryYellow mb-8 text-center pb-10">Frequently Asked Questions</h2>
                 <div className="flex flex-col items-start gap-4">
                     {faqItems.map((item, index) => (
-                        <FAQItem key={index} question={item.question} />
+                        <FAQItem key={index} question={item.question} answer={item.answer} />
                     ))}
                 </div>
             </section>
