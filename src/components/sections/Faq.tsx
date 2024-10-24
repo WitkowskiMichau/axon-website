@@ -12,8 +12,8 @@ const FAQ = () => {
 
     return (
         <div className='bg-darkBlue'>
-            <section className="container py-12 mx-auto w-3/4 px-16">
-                <h2 className="text-4xl font-russo text-primaryYellow mb-8 text-center pb-10">Frequently Asked Questions</h2>
+            <section className="container py-12 mx-auto w-3/4 px-4 sm:px-8 lg:px-16">
+                <h2 className="text-4xl sm:text-3xl font-russo text-primaryYellow mb-8 text-center pb-10">Frequently Asked Questions</h2>
                 <div className="flex flex-col items-start gap-4">
                     {faqItems.map((item, index) => (
                         <FAQItem key={index} question={item.question} answer={item.answer} />

@@ -23,7 +23,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
     return (
         <div className="mb-4">
             <h3
-                className={`text-2xl font-russo cursor-pointer transition-colors duration-500 ${
+                className={`text-2xl sm:text-xl font-russo cursor-pointer transition-colors duration-500 ${
                     isOpen ? 'bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent' : 'text-white'
                 }`}
                 onClick={toggleAnswer}
@@ -35,7 +35,7 @@ const FAQItem: React.FC<FAQItemProps> = ({ question, answer }) => {
                 className="overflow-hidden transition-[height,opacity] duration-500 ease-in-out"
                 style={{ height, opacity: isOpen ? 1 : 0 }}
             >
-                <p className="text-lg text-gray-300 mt-4">
+                <p className="text-lg sm:text-base text-gray-300 mt-4">
                     {answer}
                 </p>
             </div>
