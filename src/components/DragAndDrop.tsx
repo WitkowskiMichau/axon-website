@@ -1,11 +1,14 @@
 // src/components/DragAndDrop.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 
 const DragAndDrop: React.FC = () => {
+    const [fileName, setFileName] = useState<string | null>(null);
+
     const onDrop = (acceptedFiles: File[]) => {
-        console.log(acceptedFiles);
-        // Handle file upload logic here
+        if (acceptedFiles && acceptedFiles.length > 0) {
+            setFileName(acceptedFiles[0].name);
+        }
     };
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
@@ -18,6 +21,7 @@ const DragAndDrop: React.FC = () => {
                     <p className="text-primaryYellow">Drop the files here...</p> :
                     <p className="text-gray-300">Drag & drop some files here, or click to select files</p>
             }
+            {fileName && <p className="text-lg text-gray-300 mt-4">Uploaded File: {fileName}</p>}
         </div>
     );
 };
