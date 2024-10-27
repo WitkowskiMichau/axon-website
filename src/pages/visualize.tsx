@@ -59,7 +59,7 @@ const Visualize: React.FC = () => {
                     labels,
                     datasets: [
                         {
-                            label: valueKey === "totalRevenue" ? "Total Revenue (% of Overall Won)" : "Conversion Rate",
+                            label: valueKey === "totalRevenue" ? "Total Revenue (% of Deals Won)" : "Conversion Rate",
                             data: values,
                             backgroundColor: (context) => {
                                 const chart = context.chart;
@@ -100,10 +100,7 @@ const Visualize: React.FC = () => {
                             cornerRadius: 4, // Softer tooltip corners
                             callbacks: {
                                 label: (context) => {
-                                    if (valueKey === "conversionRate") {
-                                        return `${context.raw}%`;
-                                    }
-                                    return `$${context.raw} (${((context.raw as number) / values.reduce((a, b) => a + b, 0) * 100).toFixed(2)}%)`;
+                                    return `${context.raw}%`;
                                 },
                             },
                         },
@@ -132,10 +129,7 @@ const Visualize: React.FC = () => {
                                     size: 12, // Smaller font size
                                 },
                                 callback: (value) => {
-                                    if (valueKey === "conversionRate") {
-                                        return `${value}%`;
-                                    }
-                                    return `$${value}`;
+                                    return `${value}%`;
                                 },
                             },
                         },
@@ -158,10 +152,10 @@ const Visualize: React.FC = () => {
                     <div className="mt-8">
                         <div className="flex flex-wrap justify-between">
                             <div className="w-full md:w-1/2 p-4">
-                                <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Total Revenue (% of Won)</h3>
+                                <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Total Revenue (% of Deals Won)</h3>
                                 <div className="h-80">{visualizations.totalRevenueChart}</div> {/* Added fixed height to prevent infinite growth */}
                                 <p className="text-lg text-gray-300 mt-4">
-                                    <strong>Total Revenue:</strong> Identify which lead sources are contributing the most to your overall revenue and understand their proportion of the total &quot;Won&quot; revenue to allocate resources effectively.
+                                    Analyze the percentage of total &quot;Won&quot; revenue each lead source contributes. This helps you understand which lead sources are most effective in driving successful deals and allocate resources to maximize profitability.
                                 </p>
                             </div>
                             <div className="w-full md:w-1/2 p-4">
