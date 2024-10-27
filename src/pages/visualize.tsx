@@ -59,7 +59,7 @@ const Visualize: React.FC = () => {
                     labels,
                     datasets: [
                         {
-                            label: valueKey === "totalRevenue" ? "Total Revenue" : "Conversion Rate",
+                            label: valueKey === "totalRevenue" ? "Total Revenue (% of Overall Won)" : "Conversion Rate",
                             data: values,
                             backgroundColor: (context) => {
                                 const chart = context.chart;
@@ -69,7 +69,11 @@ const Visualize: React.FC = () => {
                             borderColor: "rgba(0, 0, 0, 0)", // Remove border
                             borderWidth: 0, // Set border width to 0
                             borderRadius: 6, // Add rounded corners to bars
-                            hoverBackgroundColor: "#fbe85a", // Softer highlight on hover
+                            hoverBackgroundColor: (context) => {
+                                const chart = context.chart;
+                                const { ctx } = chart;
+                                return gradient(ctx);
+                            }, // Use the same gradient for hover
                         },
                     ],
                 }}
@@ -81,6 +85,7 @@ const Visualize: React.FC = () => {
                             display: false, // Remove legend
                         },
                         tooltip: {
+                            displayColors: false,
                             backgroundColor: "rgba(0, 0, 0, 0.8)", // Softer tooltip background
                             titleFont: {
                                 family: "'Russo One', sans-serif", // Use the website's main font
@@ -93,6 +98,14 @@ const Visualize: React.FC = () => {
                             },
                             padding: 8, // Reduce padding for a more subtle tooltip
                             cornerRadius: 4, // Softer tooltip corners
+                            callbacks: {
+                                label: (context) => {
+                                    if (valueKey === "conversionRate") {
+                                        return `${context.raw}%`;
+                                    }
+                                    return `$${context.raw} (${((context.raw as number) / values.reduce((a, b) => a + b, 0) * 100).toFixed(2)}%)`;
+                                },
+                            },
                         },
                     },
                     scales: {
@@ -118,6 +131,12 @@ const Visualize: React.FC = () => {
                                     family: "'Russo One', sans-serif", // Use the website's font
                                     size: 12, // Smaller font size
                                 },
+                                callback: (value) => {
+                                    if (valueKey === "conversionRate") {
+                                        return `${value}%`;
+                                    }
+                                    return `$${value}`;
+                                },
                             },
                         },
                     },
@@ -139,28 +158,28 @@ const Visualize: React.FC = () => {
                     <div className="mt-8">
                         <div className="flex flex-wrap justify-between">
                             <div className="w-full md:w-1/2 p-4">
-                                <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Top Revenue-Generating Lead Sources</h3>
+                                <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Total Revenue (% of Won)</h3>
                                 <div className="h-80">{visualizations.totalRevenueChart}</div> {/* Added fixed height to prevent infinite growth */}
                                 <p className="text-lg text-gray-300 mt-4">
-                                    <strong>Total Revenue:</strong> Identify which lead sources are contributing the most to your overall revenue and allocate resources accordingly.
+                                    <strong>Total Revenue:</strong> Identify which lead sources are contributing the most to your overall revenue and understand their proportion of the total &quot;Won&quot; revenue to allocate resources effectively.
                                 </p>
                             </div>
                             <div className="w-full md:w-1/2 p-4">
-                                <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Conversion Rate Analysis by Lead Source</h3>
+                                <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Lead Source Conversion Efficiency</h3>
                                 <div className="h-80">{visualizations.conversionRateChart}</div> {/* Added fixed height to prevent infinite growth */}
                                 <p className="text-lg text-gray-300 mt-4">
-                                    <strong>Conversion Rate:</strong> Understand which channels have the highest conversion rates to optimize your sales strategy.
+                                    <strong>Conversion Rate:</strong> Understand which channels have the highest conversion efficiency to optimize your sales strategy effectively.
                                 </p>
                             </div>
                         </div>
                         <div className="mt-12">
                             <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Growth Tips Based on Lead Insights</h3>
                             <ul className="list-disc list-inside text-lg text-gray-300 space-y-4">
-                                <li><strong>Double Down on High Performers:</strong> Direct Leads and Social Media are showing strong performance. Increase budget and refine strategies to amplify growth from these channels.</li>
-                                <li><strong>Personalize by Lead Source:</strong> Adapt your communication for different lead channels. Social Media may benefit from a conversational approach, while Referrals may require personal trust-building.</li>
-                                <li><strong>Refine Low-Performing Channels:</strong> Organic and Paid Search have lower conversion rates. Test targeted content improvements to enhance audience engagement and boost performance.</li>
-                                <li><strong>Optimize Email Campaigns:</strong> A/B test different content for Email Campaigns to see which generates better responses. Consider adding follow-ups to engage with leads more personally.</li>
-                                <li><strong>Track Seasonality and Trends:</strong> Keep an eye on seasonal changes and trends. Utilize HubSpot&apos;s tracking to adjust strategies dynamically and ensure consistent growth year-round.</li>
+                                <li><strong>Maximize High-Performing Channels:</strong> Direct Leads and Social Media have shown significant impact. Strategically increase spending and enhance campaigns to take advantage of these high performers.</li>
+                                <li><strong>Channel-Specific Engagement:</strong> Tailor your approach based on each lead channel. For instance, Social Media leads could benefit from an interactive and personalized approach, while Referrals should be cultivated with trust-building and consistency.</li>
+                                <li><strong>Revitalize Low-Impact Channels:</strong> Organic and Paid Search are currently lagging. Try A/B testing new content, optimizing landing pages, or tweaking audience targeting to better connect with potential customers.</li>
+                                <li><strong>Improve Email Campaign Effectiveness:</strong> Introduce testing variations in email content and design, and leverage follow-ups to increase engagement. A more personal, story-driven narrative might yield better results.</li>
+                                <li><strong>Leverage Seasonal Insights:</strong> Use data to detect seasonal trends and adjust campaigns accordingly. HubSpot analytics can help you identify patterns to plan future campaigns for greater consistency and effectiveness.</li>
                             </ul>
                         </div>
                     </div>
