@@ -1,9 +1,18 @@
 // src/data/mockData.ts
-export const mockData = [
-    { leadSource: "Organic", dealAmount: 1000, dealStatus: "Won" },
-    { leadSource: "Paid", dealAmount: 500, dealStatus: "Lost" },
-    { leadSource: "Social Media", dealAmount: 1500, dealStatus: "Won" },
-    { leadSource: "Referrals", dealAmount: 2000, dealStatus: "Won" },
-    { leadSource: "Organic", dealAmount: 800, dealStatus: "Lost" },
-    { leadSource: "Paid", dealAmount: 1200, dealStatus: "Won" },
-];
+export const ConversionRatePercentage = {
+    'Direct': 75.76,
+    'Email Campaign': 30.30,
+    'Organic': 21.21,
+    'Pair Search': 15.15,
+    'Referral': 78.79,
+    'Social Media': 74.29,
+}
+
+export const ConversionRateByLeadSource = {
+    'Direct': 13.74,
+    'Email Campaign': 5.42,
+    'Organic': 3.44,
+    'Pair Search': 2.53,
+    'Referral': 13.95,
+    'Social Media': 13.33,
+}
