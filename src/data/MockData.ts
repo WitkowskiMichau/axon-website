@@ -1,5 +1,5 @@
 // src/data/mockData.ts
-export const ConversionRatePercentage = {
+export const ConversionRateByLeadSource = {
     'Direct': 75.76,
     'Email Campaign': 30.30,
     'Organic': 21.21,
@@ -8,7 +8,7 @@ export const ConversionRatePercentage = {
     'Social Media': 74.29,
 }
 
-export const ConversionRateByLeadSource = {
+export const PercentageOfOverallWins = {
     'Direct': 13.74,
     'Email Campaign': 5.42,
     'Organic': 3.44,

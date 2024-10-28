@@ -4,7 +4,7 @@ import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ConversionRatePercentage, ConversionRateByLeadSource } from "@/data/MockData";
+import { PercentageOfOverallWins, ConversionRateByLeadSource } from "@/data/MockData";
 
 Chart.register(CategoryScale);
 
@@ -21,9 +21,9 @@ const Visualize: React.FC = () => {
     } | null>(null);
 
     const processData = useCallback(() => {
-        const totalRevenueData = (Object.keys(ConversionRatePercentage) as Array<keyof typeof ConversionRatePercentage>).map((source) => ({
+        const totalRevenueData = (Object.keys(PercentageOfOverallWins) as Array<keyof typeof PercentageOfOverallWins>).map((source) => ({
             leadSource: source,
-            totalRevenue: ConversionRatePercentage[source],
+            totalRevenue: PercentageOfOverallWins[source],
         }));
 
         const conversionRateData = (Object.keys(ConversionRateByLeadSource) as Array<keyof typeof ConversionRateByLeadSource>).map((source) => ({
@@ -47,9 +47,9 @@ const Visualize: React.FC = () => {
 
         const gradient = (ctx: CanvasRenderingContext2D) => {
             const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-            gradient.addColorStop(0, "#00BFFF"); // '90s-blue'
-            gradient.addColorStop(0.5, "#FF69B4"); // '90s-pink'
-            gradient.addColorStop(1, "#00BFFF"); // '90s-blue'
+            gradient.addColorStop(0, "#00BFFF");
+            gradient.addColorStop(0.5, "#FF69B4");
+            gradient.addColorStop(1, "#00BFFF");
             return gradient;
         };
 
@@ -59,45 +59,45 @@ const Visualize: React.FC = () => {
                     labels,
                     datasets: [
                         {
-                            label: valueKey === "totalRevenue" ? "Total Revenue (% of Deals Won)" : "Conversion Rate",
+                            label: valueKey === "totalRevenue" ? "Total Revenue (% of Overall Wins)" : "Conversion Rate",
                             data: values,
                             backgroundColor: (context) => {
                                 const chart = context.chart;
                                 const { ctx } = chart;
                                 return gradient(ctx);
                             },
-                            borderColor: "rgba(0, 0, 0, 0)", // Remove border
-                            borderWidth: 0, // Set border width to 0
-                            borderRadius: 6, // Add rounded corners to bars
+                            borderColor: "rgba(0, 0, 0, 0)",
+                            borderWidth: 0,
+                            borderRadius: 6,
                             hoverBackgroundColor: (context) => {
                                 const chart = context.chart;
                                 const { ctx } = chart;
                                 return gradient(ctx);
-                            }, // Use the same gradient for hover
+                            },
                         },
                     ],
                 }}
                 options={{
                     responsive: true,
-                    maintainAspectRatio: true, // Prevent charts from growing indefinitely
+                    maintainAspectRatio: true,
                     plugins: {
                         legend: {
-                            display: false, // Remove legend
+                            display: false,
                         },
                         tooltip: {
                             displayColors: false,
-                            backgroundColor: "rgba(0, 0, 0, 0.8)", // Softer tooltip background
+                            backgroundColor: "rgba(0, 0, 0, 0.8)",
                             titleFont: {
-                                family: "'Russo One', sans-serif", // Use the website's main font
+                                family: "'Russo One', sans-serif",
                                 size: 14,
-                                weight: "bold", // Bold tooltip title
+                                weight: "bold",
                             },
                             bodyFont: {
-                                family: "'Russo One', sans-serif", // Use the website's main font
-                                size: 11, // Smaller font size
+                                family: "'Russo One', sans-serif",
+                                size: 11,
                             },
-                            padding: 8, // Reduce padding for a more subtle tooltip
-                            cornerRadius: 4, // Softer tooltip corners
+                            padding: 8,
+                            cornerRadius: 4,
                             callbacks: {
                                 label: (context) => {
                                     return `${context.raw}%`;
@@ -108,25 +108,25 @@ const Visualize: React.FC = () => {
                     scales: {
                         x: {
                             grid: {
-                                display: false, // Hide grid lines for X-axis for a cleaner look
+                                display: false,
                             },
                             ticks: {
                                 color: "#fff",
                                 font: {
-                                    family: "'Russo One', sans-serif", // Use the website's font
-                                    size: 12, // Smaller font size
+                                    family: "'Russo One', sans-serif",
+                                    size: 12,
                                 },
                             },
                         },
                         y: {
                             grid: {
-                                color: "rgba(255, 255, 255, 0.1)", // Soft grid lines for better contrast
+                                color: "rgba(255, 255, 255, 0.1)",
                             },
                             ticks: {
                                 color: "#fff",
                                 font: {
-                                    family: "'Russo One', sans-serif", // Use the website's font
-                                    size: 12, // Smaller font size
+                                    family: "'Russo One', sans-serif",
+                                    size: 12,
                                 },
                                 callback: (value) => {
                                     return `${value}%`;
@@ -152,18 +152,16 @@ const Visualize: React.FC = () => {
                     <div className="mt-8">
                         <div className="flex flex-wrap justify-between">
                             <div className="w-full md:w-1/2 p-4">
-                                <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Total Revenue (% of Deals Won)</h3>
-                                <div className="h-80">{visualizations.totalRevenueChart}</div> {/* Added fixed height to prevent infinite growth */}
+                                <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Total Revenue (% of Overall Wins)</h3>
+                                <div className="h-80">{visualizations.totalRevenueChart}</div>
                                 <p className="text-lg text-gray-300 mt-4">
-                                    Analyze the percentage of total &quot;Won&quot; revenue each lead source contributes. This helps you understand which lead sources are most effective in driving successful deals and allocate resources to maximize profitability.
-                                </p>
+                                    <strong>Total Revenue:</strong> Understand the percentage contribution of each lead source to the overall won revenue. This helps determine which lead sources are driving the most financial success and where to allocate resources for maximum profitability.                                </p>
                             </div>
                             <div className="w-full md:w-1/2 p-4">
                                 <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Lead Source Conversion Efficiency</h3>
-                                <div className="h-80">{visualizations.conversionRateChart}</div> {/* Added fixed height to prevent infinite growth */}
+                                <div className="h-80">{visualizations.conversionRateChart}</div>
                                 <p className="text-lg text-gray-300 mt-4">
-                                    <strong>Conversion Rate:</strong> Understand which channels have the highest conversion efficiency to optimize your sales strategy effectively.
-                                </p>
+                                    <strong>Conversion Rate:</strong> Understand the efficiency of each lead source by examining the percentage of successful conversions compared to total attempts. This insight can guide resource allocation and strategy optimization.                                </p>
                             </div>
                         </div>
                         <div className="mt-12">

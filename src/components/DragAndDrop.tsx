@@ -1,27 +1,48 @@
-// src/components/DragAndDrop.tsx
-import React, { useState } from 'react';
-import { useDropzone } from 'react-dropzone';
+import React, { useState, useRef } from "react";
 
-const DragAndDrop: React.FC = () => {
-    const [fileName, setFileName] = useState<string | null>(null);
+interface DragAndDropProps {
+    onUploadProgress: () => void;
+}
 
-    const onDrop = (acceptedFiles: File[]) => {
-        if (acceptedFiles && acceptedFiles.length > 0) {
-            setFileName(acceptedFiles[0].name);
+const DragAndDrop: React.FC<DragAndDropProps> = ({ onUploadProgress }) => {
+    const [isDragging, setIsDragging] = useState(false);
+    const fileInputRef = useRef<HTMLInputElement>(null);
+
+    const handleDrop = (event: React.DragEvent<HTMLDivElement>) => {
+        event.preventDefault();
+        setIsDragging(false);
+
+        const files = event.dataTransfer.files;
+        if (files.length > 0) {
+            onUploadProgress();
         }
     };
 
-    const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
+    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const files = event.target.files;
+        if (files && files.length > 0) {
+            onUploadProgress();
+        }
+    };
 
     return (
-        <div {...getRootProps()} className={`border-2 border-dashed p-6 rounded-lg ${isDragActive ? 'border-primaryYellow' : 'border-gray-300'}`}>
-            <input {...getInputProps()} />
-            {
-                isDragActive ?
-                    <p className="text-primaryYellow">Drop the files here...</p> :
-                    <p className="text-gray-300">Drag & drop some files here, or click to select files</p>
-            }
-            {fileName && <p className="text-lg text-gray-300 mt-4">Uploaded File: {fileName}</p>}
+        <div
+            className={`border-4 border-dashed rounded-lg p-8 ${isDragging ? "border-primaryYellow" : "border-gray-400"}`}
+            onDragOver={(e) => {
+                e.preventDefault();
+                setIsDragging(true);
+            }}
+            onDragLeave={() => setIsDragging(false)}
+            onDrop={handleDrop}
+            onClick={() => fileInputRef.current?.click()}
+        >
+            <input
+                type="file"
+                ref={fileInputRef}
+                style={{ display: "none" }}
+                onChange={handleFileChange}
+            />
+            <p className="text-center text-gray-300">Drag and drop your files here or click to select</p>
         </div>
     );
 };
