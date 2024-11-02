@@ -3,11 +3,12 @@ import FAQItem from "@/components/sections/FaqItem";
 
 const FAQ = () => {
     const faqItems = [
-        { question: "How do you provide forecast accuracy?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-        { question: "How are you different than any other analytical tool?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-        { question: "Would you be able to provide me with industry benchmarks?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-        { question: "Is my data secure?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-        { question: "How about making sense of user data with Axon?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." }
+        { question: "What is AxonAI for?", answer: "Axon help solopreneurs and small teams understand data they gather about their clients and users and create actionable plans for revenue growth." },
+        { question: "What if I don't have data file?", answer: "You can register and connect your data source: CRM, database or any analytical tool"},
+        { question: "How do you provide insights accuracy?", answer: "We do cohort analysis and multivariable analysis using all available LLMs on the market: ChatGPT, Llama, Claude, Gemini, Mistral and many more." },
+        { question: "How are you different than any other analytical tool?", answer: "We've got free tier, you can implement Axon in 45 sec, we create bespoke presentation of your own data instead of predefined dashboards and we provide better accuracy comparing multiple data models." },
+        { question: "Is my data secure?", answer: "Yes, we don't store, process or share any of your data externally." },
+        { question: "How about making sense of user data with Axon?", answer: "We not only perform revenue and pipeline analysis but can also help you understand your users data to convert more into paid accounts." }
     ];
 
     return (
