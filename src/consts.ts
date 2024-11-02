@@ -1,104 +1,122 @@
-import Abacus from "@/assets/function.png";
+import LPS from "@/assets/icons/01-LPS.png";
+import Free from "@/assets/icons/02-free.png";
+import PLG from "@/assets/icons/03-PLG.png";
+import Shorten from "@/assets/icons/04-shorten.png";
+import TopPerforming from "@/assets/icons/05-top-performing.png";
+import Performance from "@/assets/icons/06-performance.png";
+import Monetization from "@/assets/icons/07-monetisation.png";
+import CustomerBase from "@/assets/icons/08-customer-base.png";
+import Dynamic from "@/assets/icons/09-dynamic.png";
+import Customer from "@/assets/icons/10-customer.png";
+import TopPerformingSalesReps from "@/assets/icons/11-top-performing.png";
+import Lost from "@/assets/icons/12-lost.png";
+import Funnel from "@/assets/icons/13-funnel.png";
+import Forecst from "@/assets/icons/14-forecast.png";
+import Plus from "@/assets/icons/15-plus.png";
 
 export const tiles = [
     {
         id: 'lead-performance-by-source',
         title: 'Lead Performance by Source',
         description: 'focus on sources that bring revenue',
-        icon: Abacus.src,
+        icon: LPS.src,
         url: 'subscribe-to-beta'
     },
     {
         id: 'free-to-paid-conversion',
         title: 'Free to Paid users',
-        description: 'hone your product to convert more',
-        icon: Abacus.src,
+        description: 'increase user monetization',
+        icon: Free.src,
         url: 'subscribe-to-beta'
     },
     {
         id: 'plg-lead-conversion',
         title: 'PLG Lead Conversion',
         description: 'analyse won deals to optimise',
-        icon: Abacus.src,
+        icon: PLG.src,
         url: 'subscribe-to-beta'
     },
     {
         id: 'shorten-sales-cycle',
         title: 'Shorten the Sales Cycle',
-        description: 'learn how to shorten your lead time',
-        icon: Abacus.src,
+        description: 'how to shorten your lead time',
+        icon: Shorten.src,
         url: 'subscribe-to-beta'
     },
     {
-        id: 'forecast-sales-quota',
-        title: 'Forecast Sales Quota',
-        description: 'Attainment for 3 quarters ahead',
-        icon: Abacus.src,
+        id: 'top-performing-geography',
+        title: 'Top performing geography',
+        description: 'where to invest more',
+        icon: TopPerforming.src,
         url: 'subscribe-to-beta'
     },
-    {id: 'product-performance', title: 'Product performance', description: 'find you best', icon: Abacus.src},
+    {
+        id: 'product-performance',
+        title: 'Product performance',
+        description: 'find your cash-cow',
+        icon: Performance.src
+    },
     {
         id: 'monetization-strategy',
         title: 'Monetization Strategy',
-        description: 'learn which features you monetize the best',
-        icon: Abacus.src,
+        description: 'learn which feature brings most $',
+        icon: Monetization.src,
         url: 'subscribe-to-beta'
     },
     {
         id: 'customer-base-segmentation',
-        title: 'Customer Segmentation',
-        description: 'learn how to drive more expansion revenue',
-        icon: Abacus.src,
+        title: 'Customer base Segmentation',
+        description: 'drive more expansion revenue',
+        icon: CustomerBase.src,
         url: 'subscribe-to-beta'
     },
     {
-        id: 'understand-buying-personas',
-        title: 'Understand your Personas',
-        description: 'adjust your sales play to your recipients',
-        icon: Abacus.src,
+        id: 'dynamic-lead-scoring',
+        title: 'Dynamic lead scoring',
+        description: 'understand lead quality',
+        icon: Dynamic.src,
         url: 'subscribe-to-beta'
     },
-    {id: 'find-ideal-customer-profile', title: 'Find your Ideal Customer Profile', description: '', icon: Abacus.src},
+    {
+        id: 'find-ideal-customer-profile',
+        title: 'Find your Ideal Customer Profile',
+        description: '',
+        icon: Customer.src,
+        url: 'subscribe-to-beta'
+    },
     {
         id: 'top-performing-sales-reps',
         title: 'Top Performing Sales Reps',
-        description: 'replicate performance',
-        icon: Abacus.src,
+        description: 'replicate what works',
+        icon: TopPerformingSalesReps.src,
         url: 'subscribe-to-beta'
     },
     {
         id: 'lost-deals-analysis',
         title: 'Lost Deals analysis',
-        description: 'find your blind spots and iterate',
-        icon: Abacus.src,
+        description: 'win competitive game',
+        icon: Lost.src,
         url: 'subscribe-to-beta'
     },
     {
-        id: 'attribution-roi',
-        title: 'Attribution and ROI',
-        description: 'understand ROI on your marketing channels',
-        icon: Abacus.src,
+        id: 'state of sales funnel',
+        title: 'State of the Sales Funnel',
+        description: 'understand the content of your sales',
+        icon: Funnel.src,
         url: 'subscribe-to-beta'
     },
     {
-        id: 'state-of-sales-funnel',
-        title: 'Current State of the Sales Funnel',
-        description: 'map out industries, deal size and many more',
-        icon: Abacus.src,
-        url: 'subscribe-to-beta'
-    },
-    {
-        id: 'predict-the-weather',
-        title: 'Predict the weather in various places',
-        description: 'find your blind spots and iterate',
-        icon: Abacus.src,
+        id: 'forecast-sales-quota',
+        title: 'Forecast Sales Quota',
+        description: 'forecast 4 quarters ahead',
+        icon: Forecst.src,
         url: 'subscribe-to-beta'
     },
     {
         id: 'new-scenario',
-        title: '+ Add your own scenario',
+        title: 'Add your own scenario',
         description: 'help us develop the best solution',
-        icon: Abacus.src,
+        icon: Plus.src,
         url: 'subscribe-to-beta'
     },
 ];
