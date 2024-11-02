@@ -1,143 +1,42 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { Bar } from "react-chartjs-2";
-import Chart from "chart.js/auto";
-import { CategoryScale } from "chart.js";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Tips from "@/components/Tips";
+import VisualizationSection from "@/components/VisualizationSection";
 import { PercentageOfOverallWins, ConversionRateByLeadSource } from "@/data/MockData";
 
-Chart.register(CategoryScale);
-
-interface VisualizationData {
-    leadSource: string;
-    totalRevenue?: number;
-    conversionRate?: number;
-}
+const tipsData = [
+    { title: "Maximize High-Performing Channels", description: "Consider resigning from low performing channels and invest thus created sum in best-performing." },
+    { title: "ROI Estimation", description: "Best performing channel give you $ / deal, second-best performing does $ / deal and third-best performing does $ / deal. Extract cost structure to understand the overall ROI on these channels." },
+    { title: "Leverage Seasonal Insights", description: "Use historical data to detect if those are seasonal changes." }
+];
 
 const Visualize: React.FC = () => {
     const [visualizations, setVisualizations] = useState<{
-        totalRevenueChart: JSX.Element;
-        conversionRateChart: JSX.Element;
+        totalRevenueData: { leadSource: string; value: number }[];
+        conversionRateData: { leadSource: string; value: number }[];
     } | null>(null);
 
     const processData = useCallback(() => {
         const totalRevenueData = (Object.keys(PercentageOfOverallWins) as Array<keyof typeof PercentageOfOverallWins>).map((source) => ({
             leadSource: source,
-            totalRevenue: PercentageOfOverallWins[source],
+            value: PercentageOfOverallWins[source],
         }));
 
         const conversionRateData = (Object.keys(ConversionRateByLeadSource) as Array<keyof typeof ConversionRateByLeadSource>).map((source) => ({
             leadSource: source,
-            conversionRate: ConversionRateByLeadSource[source],
+            value: ConversionRateByLeadSource[source],
         }));
 
         setVisualizations({
-            totalRevenueChart: generateBarChart(totalRevenueData, "totalRevenue"),
-            conversionRateChart: generateBarChart(conversionRateData, "conversionRate"),
+            totalRevenueData,
+            conversionRateData,
         });
     }, []);
 
     useEffect(() => {
         processData();
     }, [processData]);
-
-    const generateBarChart = (data: VisualizationData[], valueKey: "totalRevenue" | "conversionRate"): JSX.Element => {
-        const labels = data.map((item) => item.leadSource);
-        const values = data.map((item) => item[valueKey] as number);
-
-        const gradient = (ctx: CanvasRenderingContext2D) => {
-            const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-            gradient.addColorStop(0, "#00BFFF");
-            gradient.addColorStop(0.5, "#FF69B4");
-            gradient.addColorStop(1, "#00BFFF");
-            return gradient;
-        };
-
-        return (
-            <Bar
-                data={{
-                    labels,
-                    datasets: [
-                        {
-                            label: valueKey === "totalRevenue" ? "Total Revenue (% of Overall Wins)" : "Conversion Rate",
-                            data: values,
-                            backgroundColor: (context) => {
-                                const chart = context.chart;
-                                const { ctx } = chart;
-                                return gradient(ctx);
-                            },
-                            borderColor: "rgba(0, 0, 0, 0)",
-                            borderWidth: 0,
-                            borderRadius: 6,
-                            hoverBackgroundColor: (context) => {
-                                const chart = context.chart;
-                                const { ctx } = chart;
-                                return gradient(ctx);
-                            },
-                        },
-                    ],
-                }}
-                options={{
-                    responsive: true,
-                    maintainAspectRatio: true,
-                    plugins: {
-                        legend: {
-                            display: false,
-                        },
-                        tooltip: {
-                            displayColors: false,
-                            backgroundColor: "rgba(0, 0, 0, 0.8)",
-                            titleFont: {
-                                family: "'Russo One', sans-serif",
-                                size: 14,
-                                weight: "bold",
-                            },
-                            bodyFont: {
-                                family: "'Russo One', sans-serif",
-                                size: 11,
-                            },
-                            padding: 8,
-                            cornerRadius: 4,
-                            callbacks: {
-                                label: (context) => {
-                                    return `${context.raw}%`;
-                                },
-                            },
-                        },
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                display: false,
-                            },
-                            ticks: {
-                                color: "#fff",
-                                font: {
-                                    family: "'Russo One', sans-serif",
-                                    size: 12,
-                                },
-                            },
-                        },
-                        y: {
-                            grid: {
-                                color: "rgba(255, 255, 255, 0.1)",
-                            },
-                            ticks: {
-                                color: "#fff",
-                                font: {
-                                    family: "'Russo One', sans-serif",
-                                    size: 12,
-                                },
-                                callback: (value) => {
-                                    return `${value}%`;
-                                },
-                            },
-                        },
-                    },
-                }}
-            />
-        );
-    };
 
     return (
         <div className="min-h-screen bg-gradient-to-r from-darkBlue to-gray-800 text-white">
@@ -151,27 +50,24 @@ const Visualize: React.FC = () => {
                 {visualizations && (
                     <div className="mt-8">
                         <div className="flex flex-wrap justify-between">
-                            <div className="w-full md:w-1/2 p-4">
-                                <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Total Revenue (% of Overall Wins)</h3>
-                                <div className="h-80">{visualizations.totalRevenueChart}</div>
-                                <p className="text-lg text-gray-300 mt-4">
-                                    <strong>Total Revenue:</strong> Understand the percentage contribution of each lead source to the overall won revenue. This helps determine which lead sources are driving the most financial success and where to allocate resources for maximum profitability.                                </p>
-                            </div>
-                            <div className="w-full md:w-1/2 p-4">
-                                <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Lead Source Conversion Efficiency</h3>
-                                <div className="h-80">{visualizations.conversionRateChart}</div>
-                                <p className="text-lg text-gray-300 mt-4">
-                                    <strong>Conversion Rate:</strong> Understand the efficiency of each lead source by examining the percentage of successful conversions compared to total attempts. This insight can guide resource allocation and strategy optimization.                                </p>
-                            </div>
+                            <VisualizationSection
+                                title="Total Revenue (% of Overall Wins)"
+                                description="Understand the percentage contribution of each lead source to the overall won revenue. This helps determine which lead sources are driving the most financial success and where to allocate resources for maximum profitability."
+                                data={visualizations.totalRevenueData}
+                                valueKey="totalRevenue"
+                                label="Total Revenue (% of Overall Wins)"
+                                chartType="bar"
+                            />
+                            <VisualizationSection
+                                title="Lead Source Conversion Efficiency"
+                                description="Understand the efficiency of each lead source by examining the percentage of successful conversions compared to total attempts. This insight can guide resource allocation and strategy optimization."
+                                data={visualizations.conversionRateData}
+                                valueKey="conversionRate"
+                                label="Conversion Rate"
+                                chartType="bar"
+                            />
                         </div>
-                        <div className="mt-12">
-                            <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Growth Tips Based on Lead Insights</h3>
-                            <ul className="list-disc list-inside text-lg text-gray-300 space-y-4">
-                                <li><strong>Maximize High-Performing Channels:</strong> consider resigning from low performing channels and invest thus created sum in best-performing</li>
-                                <li><strong>ROI estimation</strong> best performing channel give you $ / deal, second-best performing does $ / deal and and third-best performing does $ / deal. Extract cost structure to understand the overall ROI on this channels</li>
-                                <li><strong>Leverage seasonal insights</strong> use historical data to detect if those are seasonal changes.</li>
-                            </ul>
-                        </div>
+                        <Tips tips={tipsData} />
                     </div>
                 )}
             </div>
