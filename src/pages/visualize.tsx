@@ -167,11 +167,9 @@ const Visualize: React.FC = () => {
                         <div className="mt-12">
                             <h3 className="text-3xl font-semibold text-primaryYellow mb-4">Growth Tips Based on Lead Insights</h3>
                             <ul className="list-disc list-inside text-lg text-gray-300 space-y-4">
-                                <li><strong>Maximize High-Performing Channels:</strong> Direct Leads and Social Media have shown significant impact. Strategically increase spending and enhance campaigns to take advantage of these high performers.</li>
-                                <li><strong>Channel-Specific Engagement:</strong> Tailor your approach based on each lead channel. For instance, Social Media leads could benefit from an interactive and personalized approach, while Referrals should be cultivated with trust-building and consistency.</li>
-                                <li><strong>Revitalize Low-Impact Channels:</strong> Organic and Paid Search are currently lagging. Try A/B testing new content, optimizing landing pages, or tweaking audience targeting to better connect with potential customers.</li>
-                                <li><strong>Improve Email Campaign Effectiveness:</strong> Introduce testing variations in email content and design, and leverage follow-ups to increase engagement. A more personal, story-driven narrative might yield better results.</li>
-                                <li><strong>Leverage Seasonal Insights:</strong> Use data to detect seasonal trends and adjust campaigns accordingly. HubSpot analytics can help you identify patterns to plan future campaigns for greater consistency and effectiveness.</li>
+                                <li><strong>Maximize High-Performing Channels:</strong> consider resigning from low performing channels and invest thus created sum in best-performing</li>
+                                <li><strong>ROI estimation</strong> best performing channel give you $ / deal, second-best performing does $ / deal and and third-best performing does $ / deal. Extract cost structure to understand the overall ROI on this channels</li>
+                                <li><strong>Leverage seasonal insights</strong> use historical data to detect if those are seasonal changes.</li>
                             </ul>
                         </div>
                     </div>
