@@ -9,9 +9,10 @@ interface ChartContainerProps {
     label: string;
     chartType: "bar" | "line" | "pie" | "doughnut";
     chartOptions?: ChartOptions<"bar"> | ChartOptions<"line"> | ChartOptions<"pie"> | ChartOptions<"doughnut">;
+    unit?: string;
 }
 
-const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType, chartOptions }) => {
+const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType, chartOptions, unit = '' }) => {
     const labels = data.map((item) => item.leadSource);
     const values = data.map((item) => item.value);
 
@@ -115,7 +116,7 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
                 cornerRadius: 4,
                 callbacks: {
                     label: (context) => {
-                        return `${context.raw}%`;
+                        return `${context.raw} ${unit}`;
                     },
                 },
             },
@@ -144,7 +145,7 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
                         size: 12,
                     },
                     callback: (value) => {
-                        return `${value}%`;
+                        return `${value} ${unit}`;
                     },
                 },
             },
@@ -174,7 +175,7 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
                 cornerRadius: 4,
                 callbacks: {
                     label: (context) => {
-                        return `${context.raw}%`;
+                        return `${context.raw} ${unit}`;
                     },
                 },
             },
@@ -233,7 +234,7 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
                 cornerRadius: 4,
                 callbacks: {
                     label: (context) => {
-                        return `${context.raw}%`;
+                        return `${context.raw} ${unit}`;
                     },
                 },
             },

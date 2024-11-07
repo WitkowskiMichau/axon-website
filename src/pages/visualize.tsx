@@ -61,6 +61,7 @@ const Visualize: React.FC = () => {
                                 valueKey="totalRevenue"
                                 label="Total Revenue (% of Overall Wins)"
                                 chartType="bar"
+                                unit={"USD"}
                             />
                             <VisualizationSection
                                 title="Lead Source Conversion Efficiency"
@@ -69,6 +70,7 @@ const Visualize: React.FC = () => {
                                 valueKey="conversionRate"
                                 label="Conversion Rate"
                                 chartType="bar"
+                                unit={"%"}
                             />
                         </div>
                         <Tips tips={tipsData} />
