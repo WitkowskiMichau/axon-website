@@ -3,7 +3,9 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Tips from "@/components/Tips";
 import VisualizationSection from "@/components/VisualizationSection";
-import { PercentageOfOverallWins, ConversionRateByLeadSource } from "@/data/MockData";
+import {PercentageOfOverallWins, ConversionRateByLeadSource} from "@/data/MockData";
+import RevenueTrendChart from "@/components/RevenueTrendChart";
+import { RevenueOverTimeData } from "@/data/revenueOverTimeMock";
 
 const tipsData = [
     { title: "Maximize High-Performing Channels", description: "Consider resigning from low performing channels and invest thus created sum in best-performing." },
@@ -49,9 +51,11 @@ const Visualize: React.FC = () => {
                 </p>
                 {visualizations && (
                     <div className="mt-8">
+                        <RevenueTrendChart data={RevenueOverTimeData} />
                         <div className="flex flex-wrap justify-between">
+
                             <VisualizationSection
-                                title="Total Revenue (% of Overall Wins)"
+                                title="Average contract value "
                                 description="Understand the percentage contribution of each lead source to the overall won revenue. This helps determine which lead sources are driving the most financial success and where to allocate resources for maximum profitability."
                                 data={visualizations.totalRevenueData}
                                 valueKey="totalRevenue"

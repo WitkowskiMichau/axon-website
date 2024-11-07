@@ -9,7 +9,7 @@ const Tile = ({title, description, icon}: TileProps) => {
                 <img src={icon} alt={title} className="w-12 h-12 mr-4"/>
                 <h3 className="text-xl font-russo text-white">{title}</h3>
             </div>
-            <p className="text-xl text-primaryYellow">{description}</p>
+            <p className="pl- text-left text-xl text-primaryYellow">{description}</p>
         </div>
     );
 };
