@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, TimeScale } from 'chart.js';
 import 'chartjs-adapter-date-fns';
+import {colors} from "@/consts";
 
 Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, TimeScale);
 
@@ -25,13 +26,6 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
 
     const leadSources = Array.from(new Set(data.map(item => item.leadSource)));
     const dates = Array.from(new Set(data.map(item => item.date)));
-
-    const colors = [
-        '#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#A133FF',
-        '#33FFA1', '#FFA133', '#57FF33', '#5733FF', '#FF3357',
-        '#33A1FF', '#A1FF33', '#FF5733', '#33FF57', '#3357FF',
-        '#FF33A1', '#A133FF', '#33FFA1', '#FFA133', '#57FF33'
-    ];
 
     const getColor = (index: number) => colors[index % colors.length];
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Bar, Line, Pie, Doughnut } from "react-chartjs-2";
 import { Chart, CategoryScale, ChartOptions, ScriptableContext } from "chart.js/auto";
+import {colors} from "@/consts";
 
 Chart.register(CategoryScale);
 
@@ -30,22 +31,15 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
             {
                 label,
                 data: values,
-                backgroundColor: (context: ScriptableContext<"bar">) => {
-                    const chart = context.chart;
-                    const { ctx } = chart;
-                    return gradient(ctx);
-                },
+                backgroundColor: colors,
                 borderColor: "rgba(0, 0, 0, 0)",
                 borderWidth: 0,
                 borderRadius: 6,
-                hoverBackgroundColor: (context: ScriptableContext<"bar">) => {
-                    const chart = context.chart;
-                    const { ctx } = chart;
-                    return gradient(ctx);
-                },
+                hoverBackgroundColor: "#333333", // slight darkening effect on hover
             },
         ],
     };
+
 
     const lineChartData = {
         labels,
@@ -93,7 +87,7 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
         ],
     };
 
-    const defaultBarOptions: ChartOptions<"bar"> = {
+    const defaultBarOptions = {
         responsive: true,
         maintainAspectRatio: true,
         plugins: {
@@ -115,9 +109,7 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
                 padding: 8,
                 cornerRadius: 4,
                 callbacks: {
-                    label: (context) => {
-                        return `${context.raw} ${unit}`;
-                    },
+                    label: (context) => `${context.raw} ${unit}`,
                 },
             },
         },
@@ -132,6 +124,8 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
                         family: "'Russo One', sans-serif",
                         size: 12,
                     },
+                    maxRotation: 15,
+                    minRotation: 15,
                 },
             },
             y: {
@@ -144,9 +138,7 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
                         family: "'Russo One', sans-serif",
                         size: 12,
                     },
-                    callback: (value) => {
-                        return `${value} ${unit}`;
-                    },
+                    callback: (value) => `${value} ${unit}`,
                 },
             },
         },
