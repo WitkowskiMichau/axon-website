@@ -38,7 +38,7 @@ const Upload: React.FC = () => {
             <Header />
             <div className="container py-12 mx-auto w-1/2 px-4 sm:px-8 lg:px-16 h-40">
                 <h1 className="text-5xl font-bold text-center text-primaryYellow mb-8 mt-28 font-russo">Upload Your Files</h1>
-                <DragAndDrop onUploadProgress={handleUploadProgress} />
+                <div className='cursor-pointer'><DragAndDrop onUploadProgress={handleUploadProgress} /></div>
                 {uploadProgress !== null && <ProgressBar progress={uploadProgress} />}
             </div>
             <Footer />
