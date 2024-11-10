@@ -52,9 +52,8 @@ const Visualize: React.FC = () => {
                     <div className="mt-8">
                         <RevenueTrendChart data={RevenueOverTimeData} />
                         <div className="flex flex-wrap justify-between">
-
                             <VisualizationSection
-                                title="Average contract value "
+                                title="Average source value "
                                 description=""
                                 data={visualizations.totalRevenueData}
                                 valueKey="totalRevenue"

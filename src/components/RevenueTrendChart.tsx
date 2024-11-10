@@ -9,6 +9,7 @@ interface RevenueOverTimeData {
     date: string;
     leadSource: string;
     revenue: number;
+    description: string;
 }
 
 interface RevenueTrendChartProps {
@@ -40,7 +41,7 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
             const sourceData = data.filter(item => item.leadSource === source);
             return {
                 label: source,
-                data: sourceData.map(item => ({ x: item.date, y: item.revenue })),
+                data: sourceData.map(item => ({ x: item.date, y: item.revenue, description: item.description })),
                 borderColor: getColor(index),
                 backgroundColor: getColor(index) + '80', // Adding transparency
                 fill: false,
@@ -79,6 +80,13 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
             tooltip: {
                 mode: 'index' as const, // Corrected mode type
                 intersect: false,
+                callbacks: {
+                    label: (context) => {
+                        const { raw } = context;
+                        const { description } = raw as { description: string };
+                        return `${raw.y}: ${description}`;
+                    }
+                }
             },
             zoom: {
                 pan: {

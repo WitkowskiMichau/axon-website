@@ -2,1591 +2,1909 @@ export const RevenueOverTimeData = [
     {
         "date":"2024-01-01",
         "leadSource":"Organic",
-        "revenue":1000
+        "revenue":1000,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-01-01",
         "leadSource":"Paid Search",
-        "revenue":1049
+        "revenue":1831,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-01-01",
         "leadSource":"Social Media",
-        "revenue":1000
+        "revenue":885,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-01-01",
         "leadSource":"Email Campaign",
-        "revenue":1000
+        "revenue":1356,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-01-01",
         "leadSource":"Referral",
-        "revenue":1000
+        "revenue":1757,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-01-01",
         "leadSource":"Direct",
-        "revenue":1162
+        "revenue":1150,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-01-08",
         "leadSource":"Organic",
-        "revenue":1054
+        "revenue":1247,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-01-08",
         "leadSource":"Paid Search",
-        "revenue":1484
+        "revenue":1571,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-01-08",
         "leadSource":"Social Media",
-        "revenue":1211
+        "revenue":1093,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-01-08",
         "leadSource":"Email Campaign",
-        "revenue":1150
+        "revenue":1456,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-01-08",
         "leadSource":"Referral",
-        "revenue":1232
+        "revenue":1224,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-01-08",
         "leadSource":"Direct",
-        "revenue":1162
+        "revenue":1525,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-01-15",
         "leadSource":"Organic",
-        "revenue":1062
+        "revenue":1412,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-01-15",
         "leadSource":"Paid Search",
-        "revenue":1678
+        "revenue":1958,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-01-15",
         "leadSource":"Social Media",
-        "revenue":1211
+        "revenue":976,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-01-15",
         "leadSource":"Email Campaign",
-        "revenue":1150
+        "revenue":1141,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-01-15",
         "leadSource":"Referral",
-        "revenue":1709
+        "revenue":1665,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-01-15",
         "leadSource":"Direct",
-        "revenue":1162
+        "revenue":1588,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-01-22",
         "leadSource":"Organic",
-        "revenue":1062
+        "revenue":1027,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-01-22",
         "leadSource":"Paid Search",
-        "revenue":1925
+        "revenue":1245,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-01-22",
         "leadSource":"Social Media",
-        "revenue":1367
+        "revenue":1089,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-01-22",
         "leadSource":"Email Campaign",
-        "revenue":1228
+        "revenue":1126,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-01-22",
         "leadSource":"Referral",
-        "revenue":1861
+        "revenue":1267,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-01-22",
         "leadSource":"Direct",
-        "revenue":1325
+        "revenue":1466,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-01-29",
         "leadSource":"Organic",
-        "revenue":1308
+        "revenue":1188,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-01-29",
         "leadSource":"Paid Search",
-        "revenue":1925
+        "revenue":1632,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-01-29",
         "leadSource":"Social Media",
-        "revenue":1367
+        "revenue":886,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-01-29",
         "leadSource":"Email Campaign",
-        "revenue":1235
+        "revenue":1036,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-01-29",
         "leadSource":"Referral",
-        "revenue":2038
+        "revenue":1741,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-01-29",
         "leadSource":"Direct",
-        "revenue":1413
+        "revenue":1367,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-02-05",
         "leadSource":"Organic",
-        "revenue":1308
+        "revenue":1337,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-02-05",
         "leadSource":"Paid Search",
-        "revenue":2113
+        "revenue":1714,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-02-05",
         "leadSource":"Social Media",
-        "revenue":1679
+        "revenue":1292,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-02-05",
         "leadSource":"Email Campaign",
-        "revenue":1324
+        "revenue":1034,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-02-05",
         "leadSource":"Referral",
-        "revenue":2196
+        "revenue":1616,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-02-05",
         "leadSource":"Direct",
-        "revenue":1486
+        "revenue":1059,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-02-12",
         "leadSource":"Organic",
-        "revenue":1308
+        "revenue":1195,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-02-12",
         "leadSource":"Paid Search",
-        "revenue":2113
+        "revenue":1371,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-02-12",
         "leadSource":"Social Media",
-        "revenue":2005
+        "revenue":985,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-02-12",
         "leadSource":"Email Campaign",
-        "revenue":1524
+        "revenue":1265,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-02-12",
         "leadSource":"Referral",
-        "revenue":2688
+        "revenue":1437,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-02-12",
         "leadSource":"Direct",
-        "revenue":1486
+        "revenue":1318,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-02-19",
         "leadSource":"Organic",
-        "revenue":1354
+        "revenue":1433,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-02-19",
         "leadSource":"Paid Search",
-        "revenue":2421
+        "revenue":1302,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-02-19",
         "leadSource":"Social Media",
-        "revenue":2010
+        "revenue":1082,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-02-19",
         "leadSource":"Email Campaign",
-        "revenue":1970
+        "revenue":1427,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-02-19",
         "leadSource":"Referral",
-        "revenue":2910
+        "revenue":1472,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-02-19",
         "leadSource":"Direct",
-        "revenue":1570
+        "revenue":1372,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-02-26",
         "leadSource":"Organic",
-        "revenue":1354
+        "revenue":1126,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-02-26",
         "leadSource":"Paid Search",
-        "revenue":2421
+        "revenue":1917,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-02-26",
         "leadSource":"Social Media",
-        "revenue":2010
+        "revenue":1033,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-02-26",
         "leadSource":"Email Campaign",
-        "revenue":2190
+        "revenue":1155,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-02-26",
         "leadSource":"Referral",
-        "revenue":3160
+        "revenue":1588,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-02-26",
         "leadSource":"Direct",
-        "revenue":1666
+        "revenue":1577,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-03-04",
         "leadSource":"Organic",
-        "revenue":1393
+        "revenue":1150,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-03-04",
         "leadSource":"Paid Search",
-        "revenue":2421
+        "revenue":1123,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-03-04",
         "leadSource":"Social Media",
-        "revenue":2433
+        "revenue":1035,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-03-04",
         "leadSource":"Email Campaign",
-        "revenue":2190
+        "revenue":1504,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-03-04",
         "leadSource":"Referral",
-        "revenue":3160
+        "revenue":1645,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-03-04",
         "leadSource":"Direct",
-        "revenue":1910
+        "revenue":1569,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-03-11",
         "leadSource":"Organic",
-        "revenue":1393
+        "revenue":1234,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-03-11",
         "leadSource":"Paid Search",
-        "revenue":2610
+        "revenue":1808,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-03-11",
         "leadSource":"Social Media",
-        "revenue":2771
+        "revenue":1180,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-03-11",
         "leadSource":"Email Campaign",
-        "revenue":2270
+        "revenue":1578,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-03-11",
         "leadSource":"Referral",
-        "revenue":3160
+        "revenue":1459,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-03-11",
         "leadSource":"Direct",
-        "revenue":1910
+        "revenue":1262,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-03-18",
         "leadSource":"Organic",
-        "revenue":1745
+        "revenue":1099,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-03-18",
         "leadSource":"Paid Search",
-        "revenue":2610
+        "revenue":1953,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-03-18",
         "leadSource":"Social Media",
-        "revenue":2771
+        "revenue":1183,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-03-18",
         "leadSource":"Email Campaign",
-        "revenue":2691
+        "revenue":1652,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-03-18",
         "leadSource":"Referral",
-        "revenue":3160
+        "revenue":1696,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-03-18",
         "leadSource":"Direct",
-        "revenue":1952
+        "revenue":1257,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-03-25",
         "leadSource":"Organic",
-        "revenue":2220
+        "revenue":1202,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-03-25",
         "leadSource":"Paid Search",
-        "revenue":3013
+        "revenue":1257,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-03-25",
         "leadSource":"Social Media",
-        "revenue":2771
+        "revenue":926,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-03-25",
         "leadSource":"Email Campaign",
-        "revenue":2691
+        "revenue":1623,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-03-25",
         "leadSource":"Referral",
-        "revenue":3185
+        "revenue":1354,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-03-25",
         "leadSource":"Direct",
-        "revenue":2429
+        "revenue":1410,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-04-01",
         "leadSource":"Organic",
-        "revenue":2220
+        "revenue":1021,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-04-01",
         "leadSource":"Paid Search",
-        "revenue":3197
+        "revenue":1971,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-04-01",
         "leadSource":"Social Media",
-        "revenue":2771
+        "revenue":953,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-04-01",
         "leadSource":"Email Campaign",
-        "revenue":2768
+        "revenue":1071,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-04-01",
         "leadSource":"Referral",
-        "revenue":3185
+        "revenue":1234,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-04-01",
         "leadSource":"Direct",
-        "revenue":2429
+        "revenue":1294,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-04-08",
         "leadSource":"Organic",
-        "revenue":2376
+        "revenue":1178,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-04-08",
         "leadSource":"Paid Search",
-        "revenue":3197
+        "revenue":1965,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-04-08",
         "leadSource":"Social Media",
-        "revenue":2783
+        "revenue":1298,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-04-08",
         "leadSource":"Email Campaign",
-        "revenue":2851
+        "revenue":1561,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-04-08",
         "leadSource":"Referral",
-        "revenue":3185
+        "revenue":1534,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-04-08",
         "leadSource":"Direct",
-        "revenue":2620
+        "revenue":1071,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-04-15",
         "leadSource":"Organic",
-        "revenue":2820
+        "revenue":1122,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-04-15",
         "leadSource":"Paid Search",
-        "revenue":3556
+        "revenue":1600,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-04-15",
         "leadSource":"Social Media",
-        "revenue":2879
+        "revenue":1221,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-04-15",
         "leadSource":"Email Campaign",
-        "revenue":3055
+        "revenue":1663,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-04-15",
         "leadSource":"Referral",
-        "revenue":3423
+        "revenue":1598,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-04-15",
         "leadSource":"Direct",
-        "revenue":2620
+        "revenue":1001,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-04-22",
         "leadSource":"Organic",
-        "revenue":2914
+        "revenue":996,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-04-22",
         "leadSource":"Paid Search",
-        "revenue":3952
+        "revenue":1934,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-04-22",
         "leadSource":"Social Media",
-        "revenue":2879
+        "revenue":1040,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-04-22",
         "leadSource":"Email Campaign",
-        "revenue":3074
+        "revenue":1361,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-04-22",
         "leadSource":"Referral",
-        "revenue":3631
+        "revenue":1203,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-04-22",
         "leadSource":"Direct",
-        "revenue":2958
+        "revenue":1357,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-04-29",
         "leadSource":"Organic",
-        "revenue":2914
+        "revenue":1382,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-04-29",
         "leadSource":"Paid Search",
-        "revenue":3979
+        "revenue":1902,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-04-29",
         "leadSource":"Social Media",
-        "revenue":2925
+        "revenue":955,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-04-29",
         "leadSource":"Email Campaign",
-        "revenue":3438
+        "revenue":1321,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-04-29",
         "leadSource":"Referral",
-        "revenue":3858
+        "revenue":1392,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-04-29",
         "leadSource":"Direct",
-        "revenue":3058
+        "revenue":1170,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-05-06",
         "leadSource":"Organic",
-        "revenue":2914
+        "revenue":1154,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-05-06",
         "leadSource":"Paid Search",
-        "revenue":4395
+        "revenue":1729,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-05-06",
         "leadSource":"Social Media",
-        "revenue":2925
+        "revenue":1062,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-05-06",
         "leadSource":"Email Campaign",
-        "revenue":3438
+        "revenue":1691,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-05-06",
         "leadSource":"Referral",
-        "revenue":4219
+        "revenue":1372,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-05-06",
         "leadSource":"Direct",
-        "revenue":3444
+        "revenue":1411,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-05-13",
         "leadSource":"Organic",
-        "revenue":2914
+        "revenue":1430,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-05-13",
         "leadSource":"Paid Search",
-        "revenue":4565
+        "revenue":1237,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-05-13",
         "leadSource":"Social Media",
-        "revenue":2925
+        "revenue":1067,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-05-13",
         "leadSource":"Email Campaign",
-        "revenue":3848
+        "revenue":1078,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-05-13",
         "leadSource":"Referral",
-        "revenue":4452
+        "revenue":1281,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-05-13",
         "leadSource":"Direct",
-        "revenue":3531
+        "revenue":1152,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-05-20",
         "leadSource":"Organic",
-        "revenue":3351
+        "revenue":1233,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-05-20",
         "leadSource":"Paid Search",
-        "revenue":4565
+        "revenue":1466,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-05-20",
         "leadSource":"Social Media",
-        "revenue":2925
+        "revenue":992,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-05-20",
         "leadSource":"Email Campaign",
-        "revenue":4031
+        "revenue":1204,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-05-20",
         "leadSource":"Referral",
-        "revenue":4452
+        "revenue":1251,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-05-20",
         "leadSource":"Direct",
-        "revenue":4004
+        "revenue":1498,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-05-27",
         "leadSource":"Organic",
-        "revenue":3503
+        "revenue":1212,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-05-27",
         "leadSource":"Paid Search",
-        "revenue":5053
+        "revenue":1197,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-05-27",
         "leadSource":"Social Media",
-        "revenue":2925
+        "revenue":892,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-05-27",
         "leadSource":"Email Campaign",
-        "revenue":4234
+        "revenue":1125,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-05-27",
         "leadSource":"Referral",
-        "revenue":4838
+        "revenue":1645,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-05-27",
         "leadSource":"Direct",
-        "revenue":4101
+        "revenue":1582,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-06-03",
         "leadSource":"Organic",
-        "revenue":3601
+        "revenue":1420,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-06-03",
         "leadSource":"Paid Search",
-        "revenue":5292
+        "revenue":1577,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-06-03",
         "leadSource":"Social Media",
-        "revenue":2969
+        "revenue":1135,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-06-03",
         "leadSource":"Email Campaign",
-        "revenue":4388
+        "revenue":1050,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-06-03",
         "leadSource":"Referral",
-        "revenue":4838
+        "revenue":1695,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-06-03",
         "leadSource":"Direct",
-        "revenue":4101
+        "revenue":1442,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-06-10",
         "leadSource":"Organic",
-        "revenue":3601
+        "revenue":1031,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-06-10",
         "leadSource":"Paid Search",
-        "revenue":5533
+        "revenue":1525,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-06-10",
         "leadSource":"Social Media",
-        "revenue":2969
+        "revenue":905,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-06-10",
         "leadSource":"Email Campaign",
-        "revenue":4568
+        "revenue":1456,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-06-10",
         "leadSource":"Referral",
-        "revenue":5043
+        "revenue":1540,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-06-10",
         "leadSource":"Direct",
-        "revenue":4333
+        "revenue":1574,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-06-17",
         "leadSource":"Organic",
-        "revenue":3669
+        "revenue":1261,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-06-17",
         "leadSource":"Paid Search",
-        "revenue":5586
+        "revenue":1127,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-06-17",
         "leadSource":"Social Media",
-        "revenue":3422
+        "revenue":1072,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-06-17",
         "leadSource":"Email Campaign",
-        "revenue":4568
+        "revenue":1031,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-06-17",
         "leadSource":"Referral",
-        "revenue":5239
+        "revenue":1428,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-06-17",
         "leadSource":"Direct",
-        "revenue":4774
+        "revenue":1115,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-06-24",
         "leadSource":"Organic",
-        "revenue":4103
+        "revenue":1239,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-06-24",
         "leadSource":"Paid Search",
-        "revenue":6043
+        "revenue":1649,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-06-24",
         "leadSource":"Social Media",
-        "revenue":3422
+        "revenue":922,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-06-24",
         "leadSource":"Email Campaign",
-        "revenue":4794
+        "revenue":1139,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-06-24",
         "leadSource":"Referral",
-        "revenue":5239
+        "revenue":1243,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-06-24",
         "leadSource":"Direct",
-        "revenue":5141
+        "revenue":1162,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-07-01",
         "leadSource":"Organic",
-        "revenue":4103
+        "revenue":1039,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-07-01",
         "leadSource":"Paid Search",
-        "revenue":6098
+        "revenue":1979,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-07-01",
         "leadSource":"Social Media",
-        "revenue":3738
+        "revenue":1295,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-07-01",
         "leadSource":"Email Campaign",
-        "revenue":5044
+        "revenue":1524,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-07-01",
         "leadSource":"Referral",
-        "revenue":5247
+        "revenue":1387,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-07-01",
         "leadSource":"Direct",
-        "revenue":5164
+        "revenue":1488,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-07-08",
         "leadSource":"Organic",
-        "revenue":4198
+        "revenue":1119,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-07-08",
         "leadSource":"Paid Search",
-        "revenue":6100
+        "revenue":1891,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-07-08",
         "leadSource":"Social Media",
-        "revenue":3738
+        "revenue":1162,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-07-08",
         "leadSource":"Email Campaign",
-        "revenue":5044
+        "revenue":1688,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-07-08",
         "leadSource":"Referral",
-        "revenue":5482
+        "revenue":1424,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-07-08",
         "leadSource":"Direct",
-        "revenue":5164
+        "revenue":1127,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-07-15",
         "leadSource":"Organic",
-        "revenue":4573
+        "revenue":1188,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-07-15",
         "leadSource":"Paid Search",
-        "revenue":6275
+        "revenue":1478,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-07-15",
         "leadSource":"Social Media",
-        "revenue":3738
+        "revenue":1102,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-07-15",
         "leadSource":"Email Campaign",
-        "revenue":5044
+        "revenue":1328,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-07-15",
         "leadSource":"Referral",
-        "revenue":5717
+        "revenue":1473,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-07-15",
         "leadSource":"Direct",
-        "revenue":5179
+        "revenue":1298,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-07-22",
         "leadSource":"Organic",
-        "revenue":4953
+        "revenue":1070,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-07-22",
         "leadSource":"Paid Search",
-        "revenue":6275
+        "revenue":1765,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-07-22",
         "leadSource":"Social Media",
-        "revenue":4091
+        "revenue":824,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-07-22",
         "leadSource":"Email Campaign",
-        "revenue":5284
+        "revenue":1448,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-07-22",
         "leadSource":"Referral",
-        "revenue":5717
+        "revenue":1315,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-07-22",
         "leadSource":"Direct",
-        "revenue":5184
+        "revenue":1503,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-07-29",
         "leadSource":"Organic",
-        "revenue":5141
+        "revenue":1392,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-07-29",
         "leadSource":"Paid Search",
-        "revenue":6343
+        "revenue":1483,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-07-29",
         "leadSource":"Social Media",
-        "revenue":4429
+        "revenue":997,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-07-29",
         "leadSource":"Email Campaign",
-        "revenue":5284
+        "revenue":1366,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-07-29",
         "leadSource":"Referral",
-        "revenue":5717
+        "revenue":1298,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-07-29",
         "leadSource":"Direct",
-        "revenue":5273
+        "revenue":1352,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-08-05",
         "leadSource":"Organic",
-        "revenue":5294
+        "revenue":1325,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-08-05",
         "leadSource":"Paid Search",
-        "revenue":6395
+        "revenue":1940,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-08-05",
         "leadSource":"Social Media",
-        "revenue":4504
+        "revenue":1300,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-08-05",
         "leadSource":"Email Campaign",
-        "revenue":5487
+        "revenue":1367,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-08-05",
         "leadSource":"Referral",
-        "revenue":5887
+        "revenue":1685,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-08-05",
         "leadSource":"Direct",
-        "revenue":5322
+        "revenue":1021,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-08-12",
         "leadSource":"Organic",
-        "revenue":5294
+        "revenue":1454,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-08-12",
         "leadSource":"Paid Search",
-        "revenue":6889
+        "revenue":1703,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-08-12",
         "leadSource":"Social Media",
-        "revenue":4555
+        "revenue":890,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-08-12",
         "leadSource":"Email Campaign",
-        "revenue":5579
+        "revenue":1237,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-08-12",
         "leadSource":"Referral",
-        "revenue":5887
+        "revenue":1266,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-08-12",
         "leadSource":"Direct",
-        "revenue":5322
+        "revenue":1261,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-08-19",
         "leadSource":"Organic",
-        "revenue":5594
+        "revenue":1210,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-08-19",
         "leadSource":"Paid Search",
-        "revenue":6889
+        "revenue":1603,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-08-19",
         "leadSource":"Social Media",
-        "revenue":4629
+        "revenue":1201,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-08-19",
         "leadSource":"Email Campaign",
-        "revenue":5579
+        "revenue":1402,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-08-19",
         "leadSource":"Referral",
-        "revenue":6338
+        "revenue":1779,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-08-19",
         "leadSource":"Direct",
-        "revenue":5495
+        "revenue":1543,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-08-26",
         "leadSource":"Organic",
-        "revenue":5770
+        "revenue":1329,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-08-26",
         "leadSource":"Paid Search",
-        "revenue":7084
+        "revenue":1950,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-08-26",
         "leadSource":"Social Media",
-        "revenue":4629
+        "revenue":1130,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-08-26",
         "leadSource":"Email Campaign",
-        "revenue":5579
+        "revenue":1508,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-08-26",
         "leadSource":"Referral",
-        "revenue":6338
+        "revenue":1517,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-08-26",
         "leadSource":"Direct",
-        "revenue":5495
+        "revenue":1432,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-09-02",
         "leadSource":"Organic",
-        "revenue":5811
+        "revenue":1373,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-09-02",
         "leadSource":"Paid Search",
-        "revenue":7110
+        "revenue":1402,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-09-02",
         "leadSource":"Social Media",
-        "revenue":5012
+        "revenue":800,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-09-02",
         "leadSource":"Email Campaign",
-        "revenue":5624
+        "revenue":1273,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-09-02",
         "leadSource":"Referral",
-        "revenue":6338
+        "revenue":1563,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-09-02",
         "leadSource":"Direct",
-        "revenue":5512
+        "revenue":1593,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-09-09",
         "leadSource":"Organic",
-        "revenue":5983
+        "revenue":1035,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-09-09",
         "leadSource":"Paid Search",
-        "revenue":7110
+        "revenue":1358,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-09-09",
         "leadSource":"Social Media",
-        "revenue":5175
+        "revenue":1033,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-09-09",
         "leadSource":"Email Campaign",
-        "revenue":6078
+        "revenue":1673,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-09-09",
         "leadSource":"Referral",
-        "revenue":6338
+        "revenue":1484,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-09-09",
         "leadSource":"Direct",
-        "revenue":5869
+        "revenue":1076,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-09-16",
         "leadSource":"Organic",
-        "revenue":6190
+        "revenue":1212,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-09-16",
         "leadSource":"Paid Search",
-        "revenue":7110
+        "revenue":1246,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-09-16",
         "leadSource":"Social Media",
-        "revenue":5175
+        "revenue":1070,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-09-16",
         "leadSource":"Email Campaign",
-        "revenue":6243
+        "revenue":1150,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-09-16",
         "leadSource":"Referral",
-        "revenue":6375
+        "revenue":1429,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-09-16",
         "leadSource":"Direct",
-        "revenue":6224
+        "revenue":1137,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-09-23",
         "leadSource":"Organic",
-        "revenue":6423
+        "revenue":1007,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-09-23",
         "leadSource":"Paid Search",
-        "revenue":7458
+        "revenue":1311,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-09-23",
         "leadSource":"Social Media",
-        "revenue":5175
+        "revenue":1153,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-09-23",
         "leadSource":"Email Campaign",
-        "revenue":6731
+        "revenue":1214,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-09-23",
         "leadSource":"Referral",
-        "revenue":6677
+        "revenue":1489,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-09-23",
         "leadSource":"Direct",
-        "revenue":6657
+        "revenue":1200,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-09-30",
         "leadSource":"Organic",
-        "revenue":6763
+        "revenue":1048,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-09-30",
         "leadSource":"Paid Search",
-        "revenue":7651
+        "revenue":1843,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-09-30",
         "leadSource":"Social Media",
-        "revenue":5366
+        "revenue":860,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-09-30",
         "leadSource":"Email Campaign",
-        "revenue":7174
+        "revenue":1013,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-09-30",
         "leadSource":"Referral",
-        "revenue":6696
+        "revenue":1564,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-09-30",
         "leadSource":"Direct",
-        "revenue":6657
+        "revenue":1261,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-10-07",
         "leadSource":"Organic",
-        "revenue":6763
+        "revenue":1202,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-10-07",
         "leadSource":"Paid Search",
-        "revenue":7651
+        "revenue":1439,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-10-07",
         "leadSource":"Social Media",
-        "revenue":5437
+        "revenue":1210,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-10-07",
         "leadSource":"Email Campaign",
-        "revenue":7242
+        "revenue":1530,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-10-07",
         "leadSource":"Referral",
-        "revenue":6872
+        "revenue":1288,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-10-07",
         "leadSource":"Direct",
-        "revenue":7126
+        "revenue":1158,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-10-14",
         "leadSource":"Organic",
-        "revenue":6863
+        "revenue":1249,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-10-14",
         "leadSource":"Paid Search",
-        "revenue":7659
+        "revenue":1328,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-10-14",
         "leadSource":"Social Media",
-        "revenue":5654
+        "revenue":1177,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-10-14",
         "leadSource":"Email Campaign",
-        "revenue":7604
+        "revenue":1040,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-10-14",
         "leadSource":"Referral",
-        "revenue":7243
+        "revenue":1386,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-10-14",
         "leadSource":"Direct",
-        "revenue":7126
+        "revenue":1156,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-10-21",
         "leadSource":"Organic",
-        "revenue":6875
+        "revenue":963,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-10-21",
         "leadSource":"Paid Search",
-        "revenue":7716
+        "revenue":1953,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-10-21",
         "leadSource":"Social Media",
-        "revenue":6130
+        "revenue":1293,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-10-21",
         "leadSource":"Email Campaign",
-        "revenue":7765
+        "revenue":1635,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-10-21",
         "leadSource":"Referral",
-        "revenue":7466
+        "revenue":1280,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-10-21",
         "leadSource":"Direct",
-        "revenue":7530
+        "revenue":1224,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-10-28",
         "leadSource":"Organic",
-        "revenue":7064
+        "revenue":926,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-10-28",
         "leadSource":"Paid Search",
-        "revenue":7716
+        "revenue":1999,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-10-28",
         "leadSource":"Social Media",
-        "revenue":6208
+        "revenue":1296,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-10-28",
         "leadSource":"Email Campaign",
-        "revenue":7765
+        "revenue":1021,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-10-28",
         "leadSource":"Referral",
-        "revenue":7466
+        "revenue":1474,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-10-28",
         "leadSource":"Direct",
-        "revenue":8012
+        "revenue":1412,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-11-04",
         "leadSource":"Organic",
-        "revenue":7064
+        "revenue":924,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-11-04",
         "leadSource":"Paid Search",
-        "revenue":7759
+        "revenue":1107,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-11-04",
         "leadSource":"Social Media",
-        "revenue":6208
+        "revenue":1202,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-11-04",
         "leadSource":"Email Campaign",
-        "revenue":7947
+        "revenue":1675,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-11-04",
         "leadSource":"Referral",
-        "revenue":7533
+        "revenue":1690,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-11-04",
         "leadSource":"Direct",
-        "revenue":8475
+        "revenue":1143,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-11-11",
         "leadSource":"Organic",
-        "revenue":7296
+        "revenue":1485,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-11-11",
         "leadSource":"Paid Search",
-        "revenue":7759
+        "revenue":1334,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-11-11",
         "leadSource":"Social Media",
-        "revenue":6208
+        "revenue":962,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-11-11",
         "leadSource":"Email Campaign",
-        "revenue":8189
+        "revenue":1271,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-11-11",
         "leadSource":"Referral",
-        "revenue":7610
+        "revenue":1309,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-11-11",
         "leadSource":"Direct",
-        "revenue":8888
+        "revenue":1349,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-11-18",
         "leadSource":"Organic",
-        "revenue":7296
+        "revenue":1190,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-11-18",
         "leadSource":"Paid Search",
-        "revenue":7799
+        "revenue":1854,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-11-18",
         "leadSource":"Social Media",
-        "revenue":6560
+        "revenue":1181,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-11-18",
         "leadSource":"Email Campaign",
-        "revenue":8189
+        "revenue":1125,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-11-18",
         "leadSource":"Referral",
-        "revenue":8001
+        "revenue":1242,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-11-18",
         "leadSource":"Direct",
-        "revenue":9116
+        "revenue":1075,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-11-25",
         "leadSource":"Organic",
-        "revenue":7481
+        "revenue":1169,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-11-25",
         "leadSource":"Paid Search",
-        "revenue":7799
+        "revenue":1281,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-11-25",
         "leadSource":"Social Media",
-        "revenue":6560
+        "revenue":1061,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-11-25",
         "leadSource":"Email Campaign",
-        "revenue":8497
+        "revenue":1606,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-11-25",
         "leadSource":"Referral",
-        "revenue":8200
+        "revenue":1456,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-11-25",
         "leadSource":"Direct",
-        "revenue":9116
+        "revenue":1339,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-12-02",
         "leadSource":"Organic",
-        "revenue":7536
+        "revenue":1416,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-12-02",
         "leadSource":"Paid Search",
-        "revenue":7821
+        "revenue":1583,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-12-02",
         "leadSource":"Social Media",
-        "revenue":6560
+        "revenue":975,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-12-02",
         "leadSource":"Email Campaign",
-        "revenue":8805
+        "revenue":1257,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-12-02",
         "leadSource":"Referral",
-        "revenue":8559
+        "revenue":1448,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-12-02",
         "leadSource":"Direct",
-        "revenue":9305
+        "revenue":1168,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-12-09",
         "leadSource":"Organic",
-        "revenue":7536
+        "revenue":1158,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-12-09",
         "leadSource":"Paid Search",
-        "revenue":7894
+        "revenue":1411,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-12-09",
         "leadSource":"Social Media",
-        "revenue":6560
+        "revenue":1137,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-12-09",
         "leadSource":"Email Campaign",
-        "revenue":8805
+        "revenue":1262,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-12-09",
         "leadSource":"Referral",
-        "revenue":8588
+        "revenue":1272,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-12-09",
         "leadSource":"Direct",
-        "revenue":9765
+        "revenue":1458,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-12-16",
         "leadSource":"Organic",
-        "revenue":7536
+        "revenue":1431,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-12-16",
         "leadSource":"Paid Search",
-        "revenue":7894
+        "revenue":1103,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-12-16",
         "leadSource":"Social Media",
-        "revenue":6716
+        "revenue":1217,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-12-16",
         "leadSource":"Email Campaign",
-        "revenue":8805
+        "revenue":1167,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-12-16",
         "leadSource":"Referral",
-        "revenue":8588
+        "revenue":1401,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-12-16",
         "leadSource":"Direct",
-        "revenue":9934
+        "revenue":1278,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-12-23",
         "leadSource":"Organic",
-        "revenue":7773
+        "revenue":1286,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-12-23",
         "leadSource":"Paid Search",
-        "revenue":8101
+        "revenue":1256,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-12-23",
         "leadSource":"Social Media",
-        "revenue":6809
+        "revenue":1184,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-12-23",
         "leadSource":"Email Campaign",
-        "revenue":8861
+        "revenue":1430,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-12-23",
         "leadSource":"Referral",
-        "revenue":8913
+        "revenue":1237,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-12-23",
         "leadSource":"Direct",
-        "revenue":9934
+        "revenue":1543,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     },
     {
         "date":"2024-12-30",
         "leadSource":"Organic",
-        "revenue":7966
+        "revenue":1424,
+        "description":"Lead source: Organic, Client: Green Market Co."
     },
     {
         "date":"2024-12-30",
         "leadSource":"Paid Search",
-        "revenue":8101
+        "revenue":1123,
+        "description":"Lead source: Paid Search, Client: AdStar Solutions"
     },
     {
         "date":"2024-12-30",
         "leadSource":"Social Media",
-        "revenue":6809
+        "revenue":894,
+        "description":"Lead source: Social Media, Client: Social Engage Ltd."
     },
     {
         "date":"2024-12-30",
         "leadSource":"Email Campaign",
-        "revenue":9275
+        "revenue":1603,
+        "description":"Lead source: Email Campaign, Client: MailerPros"
     },
     {
         "date":"2024-12-30",
         "leadSource":"Referral",
-        "revenue":9362
+        "revenue":1580,
+        "description":"Lead source: Referral, Client: PartnerNetwork"
     },
     {
         "date":"2024-12-30",
         "leadSource":"Direct",
-        "revenue":9934
+        "revenue":1234,
+        "description":"Lead source: Direct, Client: Direct Access Inc."
     }
 ]
