@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import DragAndDrop from "@/components/DragAndDrop";
@@ -6,6 +7,7 @@ import ProgressBar from "@/components/ProgressBar";
 
 const Upload: React.FC = () => {
     const [uploadProgress, setUploadProgress] = useState<number | null>(null);
+    const router = useRouter();
 
     const handleUploadProgress = () => {
         setUploadProgress(0);
@@ -17,17 +19,19 @@ const Upload: React.FC = () => {
             interval = setInterval(() => {
                 setUploadProgress((prevProgress) => {
                     if (prevProgress !== null && prevProgress < 100) {
-                        return prevProgress + (100 / 15);
+                        return prevProgress + (100 / 5  );
                     } else {
                         clearInterval(interval);
                         return 100;
                     }
                 });
             }, 1000);
+        } else if (uploadProgress > 90) {
+            router.push("/visualize");
         }
 
         return () => clearInterval(interval);
-    }, [uploadProgress]);
+    }, [uploadProgress, router]);
 
     return (
         <div className="min-h-screen bg-gradient-to-r from-darkBlue to-gray-800 text-white">

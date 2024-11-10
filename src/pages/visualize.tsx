@@ -44,8 +44,7 @@ const Visualize: React.FC = () => {
         <div className="min-h-screen bg-gradient-to-r from-darkBlue to-gray-800 text-white">
             <Header />
             <div className="container py-12 mx-auto w-3/4 px-4 sm:px-8 lg:px-16">
-                <h1 className="text-5xl font-bold text-center text-primaryYellow mb-8 mt-28 font-russo">Uncover Your Most Profitable Lead Channels</h1>
-                <h2 className="text-2xl text-primaryYellow mb-4 text-center pb-10">Focus efforts on channels that deliver the highest return.</h2>
+                <h1 className="text-5xl font-bold text-center text-primaryYellow mb-8 mt-28 font-russo">Uncover Your Most Profitable Sources</h1>
                 <p className="text-lg text-gray-300 mb-8 text-center max-w-3xl mx-auto">
                     Welcome to your Lead Source Insights. Explore the detailed breakdown of revenue and conversion rates by each lead channel to prioritize the strategies that generate the most significant impact.
                 </p>
@@ -56,7 +55,7 @@ const Visualize: React.FC = () => {
 
                             <VisualizationSection
                                 title="Average contract value "
-                                description="Understand the percentage contribution of each lead source to the overall won revenue. This helps determine which lead sources are driving the most financial success and where to allocate resources for maximum profitability."
+                                description=""
                                 data={visualizations.totalRevenueData}
                                 valueKey="totalRevenue"
                                 label="Total Revenue (% of Overall Wins)"
@@ -65,7 +64,7 @@ const Visualize: React.FC = () => {
                             />
                             <VisualizationSection
                                 title="Lead Source Conversion Efficiency"
-                                description="Understand the efficiency of each lead source by examining the percentage of successful conversions compared to total attempts. This insight can guide resource allocation and strategy optimization."
+                                description=""
                                 data={visualizations.conversionRateData}
                                 valueKey="conversionRate"
                                 label="Conversion Rate"

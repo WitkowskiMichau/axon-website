@@ -9,7 +9,7 @@ const Tiles = () => {
                     <div className="font-jost flex flex-wrap custom-gap gap-2 items-center">
                         {tiles.map((tile, index) => (
                             <div key={tile.id} className="tile-hover-effect fade-in-top" style={{ animationDelay: `${index * 0.2}s` }}>
-                                <Tile title={tile.title} description={tile.description} icon={tile.icon} />
+                                <Tile url={tile.url} title={tile.title} description={tile.description} icon={tile.icon} />
                             </div>
                         ))}
                     </div>
