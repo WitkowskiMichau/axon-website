@@ -15,9 +15,9 @@ interface VisualizationSectionProps {
 
 const VisualizationSection: React.FC<VisualizationSectionProps> = ({ title, description, data, valueKey, label, chartType, chartOptions, unit }) => {
     return (
-        <div>
+        <div className='pb-8'>
             <h3 className="text-3xl font-semibold text-primaryYellow mb-4">{title}</h3>
-            <div className="h-80">
+            <div className="h-80 pb-10">
                 {/*@ts-expect-error: Type incompatibility issue with ChartOptions*/}
                 <ChartContainer data={data} valueKey={valueKey} label={label} chartType={chartType} chartOptions={chartOptions} unit={unit} />
             </div>

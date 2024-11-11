@@ -1,7 +1,6 @@
 import React from "react";
-import { Bar, Line, Pie, Doughnut } from "react-chartjs-2";
-import { Chart, CategoryScale, ChartOptions, ScriptableContext } from "chart.js/auto";
-import {colors} from "@/consts";
+import { Bar } from "react-chartjs-2";
+import { Chart, CategoryScale, ChartOptions } from "chart.js/auto";
 
 Chart.register(CategoryScale);
 
@@ -17,72 +16,17 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
     const labels = data.map((item) => item.leadSource);
     const values = data.map((item) => item.value);
 
-    const gradient = (ctx: CanvasRenderingContext2D) => {
-        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-        gradient.addColorStop(0, "#00BFFF");
-        gradient.addColorStop(0.5, "#FF69B4");
-        gradient.addColorStop(1, "#00BFFF");
-        return gradient;
-    };
-
     const barChartData = {
         labels,
         datasets: [
             {
                 label,
                 data: values,
-                backgroundColor: colors,
-                borderColor: "rgba(0, 0, 0, 0)",
-                borderWidth: 0,
+                backgroundColor: "rgba(75, 192, 192, 0.2)", // Light background color
+                borderColor: "rgba(75, 192, 192, 1)", // Border color
+                borderWidth: 2, // Border width
+                hoverBackgroundColor: "rgba(75, 192, 192, 0.4)", // Background color on hover
                 borderRadius: 6,
-                hoverBackgroundColor: "#333333", // slight darkening effect on hover
-            },
-        ],
-    };
-
-
-    const lineChartData = {
-        labels,
-        datasets: [
-            {
-                label,
-                data: values,
-                backgroundColor: (context: ScriptableContext<"line">) => {
-                    const chart = context.chart;
-                    const { ctx } = chart;
-                    return gradient(ctx);
-                },
-                borderColor: "rgba(0, 0, 0, 0)",
-                borderWidth: 0,
-                borderRadius: 6,
-                hoverBackgroundColor: (context: ScriptableContext<"line">) => {
-                    const chart = context.chart;
-                    const { ctx } = chart;
-                    return gradient(ctx);
-                },
-            },
-        ],
-    };
-
-    const pieDoughnutChartData = {
-        labels,
-        datasets: [
-            {
-                label,
-                data: values,
-                backgroundColor: (context: ScriptableContext<"pie" | "doughnut">) => {
-                    const chart = context.chart;
-                    const { ctx } = chart;
-                    return gradient(ctx);
-                },
-                borderColor: "rgba(0, 0, 0, 0)",
-                borderWidth: 0,
-                borderRadius: 6,
-                hoverBackgroundColor: (context: ScriptableContext<"pie" | "doughnut">) => {
-                    const chart = context.chart;
-                    const { ctx } = chart;
-                    return gradient(ctx);
-                },
             },
         ],
     };
@@ -93,6 +37,14 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
         plugins: {
             legend: {
                 display: false,
+                position: 'top',
+                labels: {
+                    color: "#fff",
+                    font: {
+                        family: "'Russo One', sans-serif",
+                        size: 14,
+                    },
+                },
             },
             tooltip: {
                 displayColors: false,
@@ -104,9 +56,9 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
                 },
                 bodyFont: {
                     family: "'Russo One', sans-serif",
-                    size: 11,
+                    size: 12,
                 },
-                padding: 8,
+                padding: 10,
                 cornerRadius: 4,
                 callbacks: {
                     label: (context) => `${context.raw} ${unit}`,
@@ -116,7 +68,8 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
         scales: {
             x: {
                 grid: {
-                    display: false,
+                    display: true,
+                    color: "rgba(255, 255, 255, 0.1)",
                 },
                 ticks: {
                     color: "#fff",
@@ -130,6 +83,7 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
             },
             y: {
                 grid: {
+                    display: true,
                     color: "rgba(255, 255, 255, 0.1)",
                 },
                 ticks: {
@@ -142,116 +96,29 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
                 },
             },
         },
-    };
-
-    const defaultLineOptions: ChartOptions<"line"> = {
-        responsive: true,
-        maintainAspectRatio: true,
-        plugins: {
-            legend: {
-                display: false,
-            },
-            tooltip: {
-                displayColors: false,
-                backgroundColor: "rgba(0, 0, 0, 0.8)",
-                titleFont: {
-                    family: "'Russo One', sans-serif",
-                    size: 14,
-                    weight: "bold",
-                },
-                bodyFont: {
-                    family: "'Russo One', sans-serif",
-                    size: 11,
-                },
-                padding: 8,
-                cornerRadius: 4,
-                callbacks: {
-                    label: (context) => {
-                        return `${context.raw} ${unit}`;
-                    },
-                },
-            },
-        },
-        scales: {
-            x: {
-                grid: {
-                    display: false,
-                },
-                ticks: {
-                    color: "#fff",
-                    font: {
-                        family: "'Russo One', sans-serif",
-                        size: 12,
-                    },
-                },
-            },
-            y: {
-                grid: {
-                    color: "rgba(255, 255, 255, 0.1)",
-                },
-                ticks: {
-                    color: "#fff",
-                    font: {
-                        family: "'Russo One', sans-serif",
-                        size: 12,
-                    },
-                    callback: (value) => {
-                        return `${value}%`;
-                    },
-                },
-            },
-        },
-    };
-
-    const defaultPieDoughnutOptions: ChartOptions<"pie" | "doughnut"> = {
-        responsive: true,
-        maintainAspectRatio: true,
-        plugins: {
-            legend: {
-                display: false,
-            },
-            tooltip: {
-                displayColors: false,
-                backgroundColor: "rgba(0, 0, 0, 0.8)",
-                titleFont: {
-                    family: "'Russo One', sans-serif",
-                    size: 14,
-                    weight: "bold",
-                },
-                bodyFont: {
-                    family: "'Russo One', sans-serif",
-                    size: 11,
-                },
-                padding: 8,
-                cornerRadius: 4,
-                callbacks: {
-                    label: (context) => {
-                        return `${context.raw} ${unit}`;
-                    },
-                },
-            },
+        animation: {
+            duration: 1000,
+            easing: 'easeInOutQuad',
         },
     };
 
     const barOptions = { ...defaultBarOptions, ...chartOptions } as ChartOptions<"bar">;
-    const lineOptions = { ...defaultLineOptions, ...chartOptions } as ChartOptions<"line">;
-    const pieDoughnutOptions = { ...defaultPieDoughnutOptions, ...chartOptions } as ChartOptions<"pie" | "doughnut">;
 
     const renderChart = () => {
         switch (chartType) {
-            case "line":
-                return <Line data={lineChartData} options={lineOptions} />;
-            case "pie":
-                return <Pie data={pieDoughnutChartData} options={pieDoughnutOptions} />;
-            case "doughnut":
-                return <Doughnut data={pieDoughnutChartData} options={pieDoughnutOptions} />;
             case "bar":
-            default:
                 return <Bar data={barChartData} options={barOptions} />;
+            default:
+                return null;
         }
     };
 
-    return <>{renderChart()}</>;
+    return (
+        <div className="chart-container">
+            <h2 className="text-2xl font-bold text-center text-primaryYellow mb-4">{label}</h2>
+            {renderChart()}
+        </div>
+    );
 };
 
 export default ChartContainer;

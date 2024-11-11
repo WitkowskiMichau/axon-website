@@ -40,7 +40,7 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
                 backgroundColor: getColor(index) + '80', // Adding transparency
                 fill: false,
                 tension: 0.4, // Adding tension to make the line smoother
-                pointRadius: 3, // Larger point radius for better visibility
+                pointRadius: 2, // Larger point radius for better visibility
                 pointStyle: 'circle',
                 hidden: index !== 0, // Hide all datasets except the first one
             };
