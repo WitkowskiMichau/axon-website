@@ -17,105 +17,90 @@ import Plus from "@/assets/icons/15-plus.png";
 export const tiles = [
     {
         id: 'lead-performance-by-source',
-        title: 'Lead Performance by Source',
-        description: 'focus on sources that bring revenue',
+        title: 'Analyze Lead Performance by Source and Revenue',
         icon: LPS.src,
         url: 'upload'
     },
     {
         id: 'free-to-paid-conversion',
-        title: 'Free to Paid users',
-        description: 'increase user monetization',
+        title: 'See why your free users don\'t convert to paid',
         icon: Free.src,
         url: 'upload'
     },
     {
         id: 'plg-lead-conversion',
-        title: 'PLG Lead Conversion',
-        description: 'analyse won deals to optimise',
+        title: 'PLG Lead Conversion  (analyse won deals to optimise)',
         icon: PLG.src,
         url: 'upload'
     },
     {
         id: 'shorten-sales-cycle',
-        title: 'Shorten the Sales Cycle',
-        description: 'how to shorten your lead time',
+        title: 'Analyze Sales Cycle length',
         icon: Shorten.src,
         url: 'upload'
     },
     {
         id: 'top-performing-geography',
-        title: 'Top performing geography',
-        description: 'where to invest more',
+        title: 'Find top performing geography',
         icon: TopPerforming.src,
         url: 'upload'
     },
     {
         id: 'product-performance',
-        title: 'Product performance',
-        description: 'find your cash-cow',
+        title: 'Analyze Product Performance by Revenue',
         icon: Performance.src
     },
     {
         id: 'monetization-strategy',
-        title: 'Monetization Strategy',
-        description: 'learn which feature brings most $',
+        title: 'Analyze top features and find Monetization Strategy',
         icon: Monetization.src,
         url: 'upload'
     },
     {
         id: 'customer-base-segmentation',
-        title: 'Customer base Segmentation',
-        description: 'drive more expansion revenue',
+        title: 'Analyze and Segment you Current customer base to drive expansion',
         icon: CustomerBase.src,
         url: 'upload'
     },
     {
         id: 'dynamic-lead-scoring',
-        title: 'Dynamic lead scoring',
-        description: 'understand lead quality',
+        title: 'Create the best Dynamic lead scoring for your my business',
         icon: Dynamic.src,
         url: 'upload'
     },
     {
         id: 'find-ideal-customer-profile',
-        title: 'Find your Ideal Customer Profile',
-        description: '',
+        title: 'Find your Ideal Customer Profile and bring more value',
         icon: Customer.src,
         url: 'upload'
     },
     {
         id: 'top-performing-sales-reps',
-        title: 'Top Performing Sales Reps',
-        description: 'replicate what works',
+        title: 'Analyze Top Performing Sales Reps',
         icon: TopPerformingSalesReps.src,
         url: 'upload'
     },
     {
         id: 'lost-deals-analysis',
-        title: 'Lost Deals analysis',
-        description: 'win competitive game',
+        title: 'Break down Lost Transactions to avoid mistakes',
         icon: Lost.src,
         url: 'upload'
     },
     {
         id: 'state of sales funnel',
-        title: 'State of the Sales Funnel',
-        description: 'understand the content of your sales',
+        title: 'Current State of the Sales Funnel',
         icon: Funnel.src,
         url: 'upload'
     },
     {
         id: 'forecast-sales-quota',
-        title: 'Forecast Sales Quota',
-        description: 'forecast 4 quarters ahead',
+        title: 'Forecast Revenue Growth',
         icon: Forecst.src,
         url: 'upload'
     },
     {
         id: 'new-scenario',
         title: 'Add your own scenario',
-        description: 'help us develop the best solution',
         icon: Plus.src,
         url: 'upload'
     },

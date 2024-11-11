@@ -18,7 +18,7 @@ const CRMModal: React.FC<CRMModalProps> = ({ isOpen, onClose }) => {
                 >
                     &times;
                 </button>
-                <h2 className="text-3xl font-bold mb-6 text-primaryYellow">Connect Your CRM</h2>
+                <h2 className="text-3xl font-bold mb-6 text-primaryYellow">Connect Multiple Data Sources</h2>
                 <div className="grid grid-cols-2 gap-4">
                     <CRMTile title="HubSpot" description="Connect your HubSpot account" />
                     <CRMTile title="Pipedrive" description="Connect your Pipedrive account" />
