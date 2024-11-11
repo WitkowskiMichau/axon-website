@@ -6,10 +6,10 @@ const Hero = () => {
                     Use actionable data to run your business
                 </h2>
                 <ul className="text-2xl text-primaryYellow font-jost space-y-6 list-none flex flex-col items-center">
-                    <li className="w-full text-center">Upload your data or connect to your preferred source effortlessly.</li>
-                    <li className="w-full text-center">Gain immediate insights with live graphs and actionable highlights.</li>
-                    <li className="w-full text-center">Receive a tailored growth plan personalized to your business.</li>
-                    <li className="w-full text-center">Start with multiple data integrations or explore the free version today.</li>
+                    <li className="w-full text-center">Drop the file or connect your data source</li>
+                    <li className="w-full text-center">Get real-time graphs and focus points</li>
+                    <li className="w-full text-center">Axon will find actionable plan for you</li>
+                    <li className="w-full text-center">Connect many data sources or use free version</li>
                 </ul>
             </section>
         </div>
