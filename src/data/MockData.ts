@@ -31,21 +31,21 @@ export const tipsData = [
 export const TipsData1 = [
     {
         title: "Focus on Direct and Referral Sources",
-        description: "Direct leads and referrals yield the highest contract values. Consider prioritizing these channels to maximize deal profitability."
+        description: "Direct leads and referrals yield the highest contract values – consider prioritizing those two."
     },
     {
         title: "Improve Email Campaign Targeting",
-        description: "Despite showing lower average value, focused segmentation and improved content could push email campaigns to generate higher-value deals."
+        description: "Despite showing lower average value, focus on campaigns profitability."
     },
 ];
 
 export const TipsData2 = [
     {
         title: "Leverage Referrals",
-        description: "Referrals have one of the highest win percentages. Double down on your referral programs by incentivizing current customers to recommend new leads."
+        description: "Referrals have one of the highest win percentages. Double down on it."
     },
     {
         title: "Optimize Paid Search Ads",
-        description: "The conversion efficiency for paid search is relatively low. Revisit the targeting criteria, keywords, and landing pages to enhance performance and increase ROI."
+        description: "The conversion efficiency for paid search is relatively low. Revisit the targeting criteria and keywords."
     },
 ];

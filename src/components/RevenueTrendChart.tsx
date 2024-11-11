@@ -37,10 +37,10 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
                 label: source,
                 data: sourceData.map(item => ({ x: item.date, y: item.revenue, description: item.description })),
                 borderColor: getColor(index),
-                backgroundColor: getColor(index) + '80', // Adding transparency
+                backgroundColor: getColor(index) + '33', // Light background for the area (more transparency)
                 fill: false,
-                tension: 0.4, // Adding tension to make the line smoother
-                pointRadius: 2, // Larger point radius for better visibility
+                tension: 0.4, // Smooth out the lines
+                pointRadius: 3,
                 pointStyle: 'circle',
                 hidden: index !== 0, // Hide all datasets except the first one
             };
@@ -60,26 +60,26 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
                 title: {
                     display: true,
                     text: 'Date',
-                    color: '#D3D3D3', // Use a consistent light gray color
+                    color: '#D3D3D3',
                 },
                 ticks: {
-                    color: '#D3D3D3', // Use a consistent light gray color
+                    color: '#D3D3D3',
                 },
             },
             y: {
                 title: {
                     display: true,
                     text: 'Revenue',
-                    color: '#D3D3D3', // Use a consistent light gray color
+                    color: '#D3D3D3',
                 },
                 ticks: {
-                    color: '#D3D3D3', // Use a consistent light gray color
+                    color: '#D3D3D3',
                 },
             },
         },
         elements: {
             line: {
-                borderJoinStyle: 'round', // Makes line connections rounded
+                borderJoinStyle: 'round',
             },
             point: {
                 borderWidth: 2,

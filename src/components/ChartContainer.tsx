@@ -8,12 +8,12 @@ Chart.register(CategoryScale);
 interface ChartContainerProps {
     data: { leadSource: string; value: number }[];
     label: string;
-    chartType: "bar" | "line" | "pie" | "doughnut";
-    chartOptions?: ChartOptions<"bar"> | ChartOptions<"line"> | ChartOptions<"pie"> | ChartOptions<"doughnut">;
+    chartType: "bar";
+    chartOptions?: ChartOptions<"bar">;
     unit?: string;
 }
 
-const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType, chartOptions, unit = '' }) => {
+const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartOptions, unit = '' }) => {
     const labels = data.map((item) => item.leadSource);
     const values = data.map((item) => item.value);
 
@@ -23,16 +23,17 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
             {
                 label,
                 data: values,
-                backgroundColor: "transparent", // Transparent background
-                borderColor: colors, // Colored border
-                borderWidth: 3, // Border width
-                hoverBackgroundColor: colors, // Background color on hover
+                backgroundColor: colors.map(color => color + '55'), // Light, transparent background
+                borderColor: colors,
+                borderWidth: 2,
+                hoverBackgroundColor: colors.map(color => color + 'AA'), // Darker on hover
                 borderRadius: 4,
+                hoverBorderWidth: 3,
             },
         ],
     };
 
-    const defaultBarOptions = {
+    const defaultBarOptions: ChartOptions<"bar"> = {
         responsive: true,
         maintainAspectRatio: true,
         plugins: {
@@ -69,13 +70,10 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
                         family: "'Russo One', sans-serif",
                         size: 12,
                     },
-                    maxRotation: 15,
-                    minRotation: 15,
                 },
             },
             y: {
                 grid: {
-                    display: true,
                     color: "rgba(255, 255, 255, 0.1)",
                 },
                 ticks: {
@@ -96,19 +94,10 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
 
     const barOptions = { ...defaultBarOptions, ...chartOptions } as ChartOptions<"bar">;
 
-    const renderChart = () => {
-        switch (chartType) {
-            case "bar":
-                return <Bar data={barChartData} options={barOptions} />;
-            default:
-                return null;
-        }
-    };
-
     return (
         <div className="chart-container">
             <h2 className="text-2xl font-bold text-center text-primaryYellow mb-4">{label}</h2>
-            {renderChart()}
+            <Bar data={barChartData} options={barOptions} />
         </div>
     );
 };
