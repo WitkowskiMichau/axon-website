@@ -1,17 +1,20 @@
 const Hero = () => {
     return (
         <div className="bg-gradient-to-b from-black to-gray-900 flex items-center justify-center">
-            <section className="container text-center mx-auto pb-24">
-                <h2 className="pb-12 mt-60 text-5xl font-bold font-russo text-90sBlue animate-colorChange">
-                    Never miss your revenue quota using all world&apos;s largest LLMs.
+            <section className="container mx-auto pb-24">
+                <h2 className="pb-12 mt-40 text-5xl font-bold font-russo text-90sBlue animate-colorChange text-center">
+                    Empower Your Business with Real-Time Data
                 </h2>
-                <p className="text-2xl text-primaryYellow font-jost">
-                    Upload your data or connect your data source and Axon will analyse, present <br />
-                    and find actionable plan for you. We don&apos;t use data externally in any shape or form.
-                </p>
+                <ul className="text-2xl text-primaryYellow font-jost space-y-6 list-none flex flex-col items-center">
+                    <li className="w-full text-center">Upload your data or connect to your preferred source effortlessly.</li>
+                    <li className="w-full text-center">Gain immediate insights with live graphs and actionable highlights.</li>
+                    <li className="w-full text-center">Receive a tailored growth plan personalized to your business.</li>
+                    <li className="w-full text-center">Start with multiple data integrations or explore the free version today.</li>
+                </ul>
             </section>
         </div>
     );
 };
+
 
 export default Hero;

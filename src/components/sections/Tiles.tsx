@@ -4,7 +4,7 @@ import { tiles } from "@/consts";
 const Tiles = () => {
     return (
         <div className="bg-gradient-to-b from-gray-900 to-darkBlue">
-            <section className="container mx-auto py-12 text-center">
+            <section className="container mx-auto py-12 pt-2 text-center">
                 <main className="flex-grow">
                     <div className="font-jost flex flex-wrap justify-center gap-2 items-center">
                         {tiles.map((tile, index) => (
