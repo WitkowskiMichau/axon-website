@@ -3,8 +3,9 @@ import { Line } from 'react-chartjs-2';
 import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler } from 'chart.js';
 import 'chartjs-adapter-date-fns';
 import { colors } from "@/consts";
+import CrosshairPlugin from 'chartjs-plugin-crosshair';
 
-Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler);
+Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler, CrosshairPlugin);
 
 interface RevenueOverTimeData {
     date: string;
@@ -138,6 +139,32 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
                         enabled: true,
                     },
                     mode: 'x',
+                },
+            },
+            crosshair: {
+                line: {
+                    color: 'lightgray', // Crosshair line color
+                    width: 1,
+                },
+                sync: {
+                    enabled: false,
+                },
+                zoom: {
+                    enabled: false,
+                },
+                callbacks: {
+                    beforeDraw: (chart) => {
+                        const ctx = chart.ctx;
+                        const chartArea = chart.chartArea;
+                        ctx.save();
+                        ctx.strokeStyle = 'lightgray';
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(chartArea.left, chartArea.top);
+                        ctx.lineTo(chartArea.left, chartArea.bottom);
+                        ctx.stroke();
+                        ctx.restore();
+                    },
                 },
             },
         },
