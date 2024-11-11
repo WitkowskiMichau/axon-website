@@ -40,7 +40,7 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
                 backgroundColor: getColor(index) + '80', // Adding transparency
                 fill: false,
                 tension: 0.4, // Adding tension to make the line smoother
-                pointRadius: 5, // Larger point radius for better visibility
+                pointRadius: 3, // Larger point radius for better visibility
                 pointStyle: 'circle',
                 hidden: index !== 0, // Hide all datasets except the first one
             };
@@ -60,12 +60,20 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
                 title: {
                     display: true,
                     text: 'Date',
+                    color: '#D3D3D3', // Use a consistent light gray color
+                },
+                ticks: {
+                    color: '#D3D3D3', // Use a consistent light gray color
                 },
             },
             y: {
                 title: {
                     display: true,
                     text: 'Revenue',
+                    color: '#D3D3D3', // Use a consistent light gray color
+                },
+                ticks: {
+                    color: '#D3D3D3', // Use a consistent light gray color
                 },
             },
         },
@@ -83,6 +91,27 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
             legend: {
                 display: true,
                 position: 'top' as const, // Corrected position type
+                labels: {
+                    generateLabels: (chart) => {
+                        const datasets = chart.data.datasets;
+                        return datasets.map((dataset, i) => ({
+                            fontColor: dataset.borderColor,
+                            text: dataset.label,
+                            fillStyle: chart.isDatasetVisible(i) ? dataset.borderColor : 'transparent',
+                            strokeStyle: dataset.borderColor,
+                            lineWidth: 2,
+                            hidden: !chart.isDatasetVisible(i),
+                            datasetIndex: i,
+                            textDecoration: 'none',
+                        }));
+                    },
+                },
+                onClick: (e, legendItem, legend) => {
+                    const index = legendItem.datasetIndex;
+                    const ci = legend.chart;
+                    ci.setDatasetVisibility(index, !ci.isDatasetVisible(index));
+                    ci.update();
+                },
             },
             tooltip: {
                 mode: 'index' as const, // Corrected mode type
