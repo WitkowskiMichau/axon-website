@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
-import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, TimeScale } from 'chart.js';
+import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler } from 'chart.js';
 import 'chartjs-adapter-date-fns';
-import {colors} from "@/consts";
+import { colors } from "@/consts";
 
-Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, TimeScale);
+Chart.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, TimeScale, Filler);
 
 interface RevenueOverTimeData {
     date: string;
@@ -39,6 +39,9 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
                 borderColor: getColor(index),
                 backgroundColor: getColor(index) + '80', // Adding transparency
                 fill: false,
+                tension: 0.4, // Adding tension to make the line smoother
+                pointRadius: 5, // Larger point radius for better visibility
+                pointStyle: 'circle',
                 hidden: index !== 0, // Hide all datasets except the first one
             };
         }),
@@ -64,6 +67,16 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
                     display: true,
                     text: 'Revenue',
                 },
+            },
+        },
+        elements: {
+            line: {
+                borderJoinStyle: 'round', // Makes line connections rounded
+            },
+            point: {
+                borderWidth: 2,
+                hitRadius: 10,
+                hoverRadius: 7,
             },
         },
         plugins: {

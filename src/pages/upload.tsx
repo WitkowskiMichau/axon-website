@@ -19,7 +19,7 @@ const Upload: React.FC = () => {
             interval = setInterval(() => {
                 setUploadProgress((prevProgress) => {
                     if (prevProgress !== null && prevProgress < 100) {
-                        return prevProgress + (100 / 5  );
+                        return prevProgress + (100 / 5);
                     } else {
                         clearInterval(interval);
                         return 100;
@@ -36,7 +36,7 @@ const Upload: React.FC = () => {
     return (
         <div className="min-h-screen bg-gradient-to-r from-darkBlue to-gray-800 text-white">
             <Header />
-            <div className="container py-12 mx-auto w-1/2 px-4 sm:px-8 lg:px-16 h-40">
+            <div className="container py-12 mx-auto w-3/4 px-4 h-80">
                 <h1 className="text-5xl font-bold text-center text-primaryYellow mb-8 mt-28 font-russo">Upload Your Files</h1>
                 <div className='cursor-pointer'><DragAndDrop onUploadProgress={handleUploadProgress} /></div>
                 {uploadProgress !== null && <ProgressBar progress={uploadProgress} />}

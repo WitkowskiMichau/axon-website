@@ -27,7 +27,7 @@ const DragAndDrop: React.FC<DragAndDropProps> = ({ onUploadProgress }) => {
 
     return (
         <div
-            className={`border-4 border-dashed rounded-lg p-8 ${isDragging ? "border-primaryYellow" : "border-gray-400"}`}
+            className={`border-4 border-dashed rounded-lg h-80 max-h-screen ${isDragging ? "border-primaryYellow" : "border-gray-400"} flex items-center justify-center`}
             onDragOver={(e) => {
                 e.preventDefault();
                 setIsDragging(true);
