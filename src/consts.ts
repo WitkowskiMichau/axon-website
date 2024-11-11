@@ -106,6 +106,25 @@ export const tiles = [
     },
 ];
 
+export const crmTiles = [
+    { title: "Google Sheets", description: "Connect your Google Sheets account", icon: LPS.src },
+    { title: "Google Analytics", description: "Connect your Google Analytics account", icon: LPS.src },
+    { title: "Plausible", description: "Connect your Plausible account", icon: LPS.src },
+    { title: "PiwikPRO", description: "Connect your PiwikPRO account", icon: LPS.src },
+    { title: "Mixpanel", description: "Connect your Mixpanel account", icon: LPS.src },
+    { title: "Amplitude", description: "Connect your Amplitude account", icon: LPS.src },
+    { title: "Stripe", description: "Connect your Stripe account", icon: LPS.src },
+    { title: "Lemonsqueezy", description: "Connect your Lemonsqueezy account", icon: LPS.src },
+    { title: "HubSpot", description: "Connect your HubSpot account", icon: LPS.src },
+    { title: "Pipedrive", description: "Connect your Pipedrive account", icon: LPS.src },
+    { title: "Zoho CRM", description: "Connect your Zoho CRM account", icon: LPS.src },
+    { title: "Salesforce", description: "Connect your Salesforce account", icon: LPS.src },
+    { title: "Snowflake", description: "Connect your Snowflake account", icon: LPS.src },
+    { title: "BigQuery", description: "Connect your BigQuery account", icon: LPS.src },
+    { title: "Redshift", description: "Connect your Redshift account", icon: LPS.src },
+    { title: "Azure", description: "Connect your Azure account", icon: LPS.src },
+];
+
 export const colors = [
     '#2A9D8F', '#E76F51', '#F4A261', '#264653', '#E9C46A', '#8AB17D', '#A3A9AC', '#BC4749'
 ];
