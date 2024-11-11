@@ -92,6 +92,7 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
                 display: true,
                 position: 'top' as const, // Corrected position type
                 labels: {
+                    textDecoration: 'none',
                     generateLabels: (chart) => {
                         const datasets = chart.data.datasets;
                         return datasets.map((dataset, i) => ({
