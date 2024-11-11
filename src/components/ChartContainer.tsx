@@ -1,6 +1,7 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart, CategoryScale, ChartOptions } from "chart.js/auto";
+import { colors } from "@/consts";
 
 Chart.register(CategoryScale);
 
@@ -22,11 +23,11 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
             {
                 label,
                 data: values,
-                backgroundColor: "rgba(75, 192, 192, 0.2)", // Light background color
-                borderColor: "rgba(75, 192, 192, 1)", // Border color
-                borderWidth: 2, // Border width
-                hoverBackgroundColor: "rgba(75, 192, 192, 0.4)", // Background color on hover
-                borderRadius: 6,
+                backgroundColor: "transparent", // Transparent background
+                borderColor: colors, // Colored border
+                borderWidth: 3, // Border width
+                hoverBackgroundColor: colors, // Background color on hover
+                borderRadius: 4,
             },
         ],
     };
@@ -37,14 +38,6 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
         plugins: {
             legend: {
                 display: false,
-                position: 'top',
-                labels: {
-                    color: "#fff",
-                    font: {
-                        family: "'Russo One', sans-serif",
-                        size: 14,
-                    },
-                },
             },
             tooltip: {
                 displayColors: false,
@@ -56,9 +49,9 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
                 },
                 bodyFont: {
                     family: "'Russo One', sans-serif",
-                    size: 12,
+                    size: 11,
                 },
-                padding: 10,
+                padding: 8,
                 cornerRadius: 4,
                 callbacks: {
                     label: (context) => `${context.raw} ${unit}`,
@@ -68,8 +61,7 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartType,
         scales: {
             x: {
                 grid: {
-                    display: true,
-                    color: "rgba(255, 255, 255, 0.1)",
+                    display: false,
                 },
                 ticks: {
                     color: "#fff",
