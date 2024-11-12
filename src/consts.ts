@@ -26,10 +26,14 @@ import zoho from "@/assets/icons/connectors/zoho.png";
 import salesforce from "@/assets/icons/connectors/salesforce.png";
 import snowflake from "@/assets/icons/connectors/snowflake.png";
 import bigquery from "@/assets/icons/connectors/bigquery.png";
+import azure from "@/assets/icons/connectors/azure.png";
+import aws from "@/assets/icons/connectors/aws.png";
 
 export const crmTiles = [
     { title: "Google Sheets", description: "Connect your Google Sheets account", icon: googlesheets.src },
     { title: "Google Analytics", description: "Connect your Google Analytics account", icon: googleanalytics.src },
+    { title: "AWS", description: "Connect your AWS account", icon: aws.src },
+    { title: "Azure", description: "Connect your Azure account", icon: azure.src },
     { title: "Plausible", description: "Connect your Plausible account", icon: plausible.src },
     { title: "Mixpanel", description: "Connect your Mixpanel account", icon: mixpanel.src },
     { title: "Amplitude", description: "Connect your Amplitude account", icon: amplutide.src },

@@ -24,7 +24,7 @@ const CRMModal: React.FC<CRMModalProps> = ({ isOpen, onClose }) => {
                 <h2 className="text-3xl font-bold mb-6 text-primaryYellow">Connect Multiple Data Sources</h2>
                 <div className="grid grid-cols-2 gap-4">
                     {crmTiles.map((tile, index) => (
-                        <CRMTile key={index} title={tile.title} description={tile.description} icon={tile.icon} />
+                        <CRMTile key={index} title={tile.title} icon={tile.icon} />
                     ))}
                 </div>
                 <button
