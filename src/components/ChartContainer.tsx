@@ -37,6 +37,12 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartOptio
         responsive: true,
         maintainAspectRatio: true,
         plugins: {
+            crosshair: {
+                line: {
+                    color: 'transparent', // Crosshair line color
+                    width: 1,
+                },
+            },
             legend: {
                 display: false,
             },

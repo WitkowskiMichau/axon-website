@@ -7,11 +7,11 @@ const Hero = () => {
                 </h2>
                 <div className="w-full max-w-lg mx-auto">
                     <ul className="text-2xl text-primaryYellow font-jost space-y-6 list-none">
-                        <li className="w-full text-left">Drop the file or connect your data source 📤</li>
-                        <li className="w-full text-left">Get real-time graphs and focus points 📈</li>
-                        <li className="w-full text-left">Axon will find actionable plan for you 🗺️</li>
-                        <li className="w-full text-left">Connect many data sources or use free version 🔌</li>
-                        <li className="w-full text-left">Your data is secured 🔒</li>
+                        <li className="w-full text-left">📤 Drop the file or connect your data source </li>
+                        <li className="w-full text-left">📈 Get real-time graphs and focus points </li>
+                        <li className="w-full text-left">🗺 Axon will find actionable plan for you ️</li>
+                        <li className="w-full text-left">🔌 Connect many data sources or use free version </li>
+                        <li className="w-full text-left">🔒 Your data is secured </li>
                     </ul>
                 </div>
             </section>
