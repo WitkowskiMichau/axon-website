@@ -1,9 +1,11 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart, CategoryScale, ChartOptions } from "chart.js/auto";
+import 'chartjs-plugin-crosshair';
 import { colors } from "@/consts";
+import CrosshairPlugin from 'chartjs-plugin-crosshair';
 
-Chart.register(CategoryScale);
+Chart.register(CategoryScale, CrosshairPlugin);
 
 interface ChartContainerProps {
     data: { leadSource: string; value: number }[];
@@ -96,7 +98,7 @@ const ChartContainer: React.FC<ChartContainerProps> = ({ data, label, chartOptio
             duration: 1000,
             easing: 'easeInOutQuad',
         },
-    };
+    } as unknown as ChartOptions<"bar">;
 
     const barOptions = { ...defaultBarOptions, ...chartOptions } as ChartOptions<"bar">;
 
