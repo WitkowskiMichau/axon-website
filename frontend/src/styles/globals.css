@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add any custom styles here */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #000; /* Ensure the background is dark */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in-tile {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0; /* Ensure elements are hidden initially */
+}
+
+@keyframes colorChange {
+    0%, 100% {
+        color: #00BFFF; /* 90s blue */
+    }
+    50% {
+        color: #FF69B4; /* 90s pink */
+    }
+}
+
+.animate-colorChange {
+    animation: colorChange 5s infinite;
+}
+
+.shadow-bright {
+    box-shadow: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
+}
+
+.tile-hover-effect:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    border-image: linear-gradient(to right, #FF69B4, #00BFFF) 1;
+}
+
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-top {
+    animation: fadeInTop 1s ease-out forwards;
+    opacity: 0; /* Ensure elements are hidden initially */
+}
+
+@keyframes borderShine {
+    0% {
+        border-color: #FF69B4; /* Pink */
+    }
+    50% {
+        border-color: #00BFFF; /* Blue */
+    }
+    100% {
+        border-color: #FF69B4; /* Pink */
+    }
+}
+
+.hover\:border-shine:hover {
+    animation: borderShine 2s infinite;
+}
+
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-top {
+    animation: fadeInTop 1s ease-out forwards;
+    opacity: 0; /* Ensure elements are hidden initially */
+}
+
+@keyframes borderShine {
+    0% {
+        border-color: #FF69B4; /* Pink */
+    }
+    50% {
+        border-color: #00BFFF; /* Blue */
+    }
+    100% {
+        border-color: #FF69B4; /* Pink */
+    }
+}
+
+
+.price-item-hover-effect {
+    cursor: pointer;
+}
+
+.price-item-hover-effect:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.3);
+}
