@@ -1,0 +1,15 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./backend/src:/app/src

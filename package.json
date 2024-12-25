@@ -1,44 +1,19 @@
 {
-  "name": "axon",
-  "version": "0.1.0",
+  "name": "shared",
+  "version": "1.0.0",
+  "main": "index.js",
   "private": true,
-  "engines": {
-    "node": "20.x",
-    "npm": "10.x"
-  },
-  "scripts": {
-    "build:tailwind": "tsc tailwind.config.ts --outDir .",
-    "build": "next build",
-    "dev": "next dev",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@tensorflow/tfjs": "^4.21.0",
-    "chart.js": "^4.4.5",
-    "chartjs-adapter-date-fns": "^3.0.0",
-    "chartjs-plugin-crosshair": "^2.0.0",
-    "chartjs-plugin-zoom": "^2.0.1",
-    "date-fns": "^4.1.0",
-    "express": "^4.21.0",
-    "lodash": "^4.17.21",
-    "next": "14.2.11",
-    "postcss-import": "^16.1.0",
-    "react": "^18",
-    "react-chartjs-2": "^5.2.0",
-    "react-dom": "^18",
-    "react-dropzone": "^14.2.10",
-    "react-intersection-observer": "^9.13.1",
-    "xlsx": "^0.18.5"
-  },
+  "repository": "git@github.com:WitkowskiMichau/axon-website.git",
+  "author": "Michal Witkowski <WitkowskiMichau@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared"
+  ],
   "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.11",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13",
-    "typescript": "^5"
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/morgan": "^1.9.9"
   }
 }
