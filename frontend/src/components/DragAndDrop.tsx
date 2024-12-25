@@ -1,12 +1,13 @@
+// frontend/src/components/DragAndDrop.tsx
 import { useState } from "react";
-import axios from "axios";
+import uploadFile from "@/services/uploadService";
 
 const DragAndDrop = () => {
-    const [file, setFile] = useState(null);
+    const [file, setFile] = useState<File | null>(null);
     const [isDragging, setIsDragging] = useState(false);
     const [uploading, setUploading] = useState(false);
 
-    const handleDragOver = (e) => {
+    const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
         e.preventDefault();
         setIsDragging(true);
     };
@@ -15,7 +16,7 @@ const DragAndDrop = () => {
         setIsDragging(false);
     };
 
-    const handleDrop = (e) => {
+    const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
         e.preventDefault();
         setIsDragging(false);
         if (e.dataTransfer.files && e.dataTransfer.files[0]) {
@@ -23,8 +24,10 @@ const DragAndDrop = () => {
         }
     };
 
-    const handleFileChange = (e) => {
-        setFile(e.target.files[0]);
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files && e.target.files[0]) {
+            setFile(e.target.files[0]);
+        }
     };
 
     const handleUpload = async () => {
@@ -35,19 +38,10 @@ const DragAndDrop = () => {
 
         setUploading(true);
 
-        const formData = new FormData();
-        formData.append("file", file);
-
         try {
-            const response = await axios.post("/api/upload", formData, {
-                headers: { "Content-Type": "multipart/form-data" },
-            });
-
-            if (response.status === 200) {
-                alert("Plik został przesłany pomyślnie!");
-            }
+            await uploadFile(file);
+            alert("Plik został przesłany pomyślnie!");
         } catch (error) {
-            console.error("Błąd podczas przesyłania pliku:", error);
             alert("Wystąpił błąd podczas przesyłania pliku.");
         } finally {
             setUploading(false);
