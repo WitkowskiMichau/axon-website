@@ -1,4 +1,4 @@
-import useSWR, { mutate } from 'swr';
+import { mutate } from 'swr';
 
 const uploadFile = async (file: File) => {
     try {
@@ -17,9 +17,9 @@ const uploadFile = async (file: File) => {
         const data = await response.json();
         console.log('File uploaded successfully:', data);
 
-        // Mutate SWR cache with new data
+        await mutate('http://localhost:8000/api/lps/upload', data, false);
         console.log('Mutating SWR cache with new data:', data);
-        mutate('/api/data/', data, false);
+
 
         return data;
     } catch (error) {
