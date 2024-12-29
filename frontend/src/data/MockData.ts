@@ -1,12 +1,12 @@
 // src/data/mockData.ts
-export const AverageSourceValue = {
-    'Organic': 26.80,  // Improved from initial, stable value due to enhanced SEO efforts
-    'Paid Search': 33.10,  // Paid search campaigns with seasonal ups and downs
-    'Social Media': 70.45,  // Slight variation from initial value, sometimes strong but not always consistent
-    'Email Campaign': 42.75,  // Slightly better than initial value due to campaign optimization
-    'Referral': 95.60,  // Higher value as referrals tend to bring better quality leads
-    'Direct': 195.50,  // Realistic and consistent performer
-}
+    export const AverageSourceValue = {
+        'Organic': 26.80,  // Improved from initial, stable value due to enhanced SEO efforts
+        'Paid Search': 33.10,  // Paid search campaigns with seasonal ups and downs
+        'Social Media': 70.45,  // Slight variation from initial value, sometimes strong but not always consistent
+        'Email Campaign': 42.75,  // Slightly better than initial value due to campaign optimization
+        'Referral': 95.60,  // Higher value as referrals tend to bring better quality leads
+        'Direct': 195.50,  // Realistic and consistent performer
+    }
 
 export const PercentageOfOverallWins = {
     'Organic': 4.85,  // Improved conversion, but still lower compared to other sources

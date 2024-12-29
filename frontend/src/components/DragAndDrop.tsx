@@ -1,11 +1,12 @@
-// frontend/src/components/DragAndDrop.tsx
 import { useState } from "react";
+import { useRouter } from "next/router";
 import uploadFile from "@/services/uploadService";
 
 const DragAndDrop = () => {
     const [file, setFile] = useState<File | null>(null);
     const [isDragging, setIsDragging] = useState(false);
     const [uploading, setUploading] = useState(false);
+    const router = useRouter();
 
     const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
         e.preventDefault();
@@ -32,7 +33,7 @@ const DragAndDrop = () => {
 
     const handleUpload = async () => {
         if (!file) {
-            alert("Wybierz plik przed uploadem!");
+            console.log("Wybierz plik przed uploadem!");
             return;
         }
 
@@ -40,9 +41,10 @@ const DragAndDrop = () => {
 
         try {
             await uploadFile(file);
-            alert("Plik został przesłany pomyślnie!");
+            console.log("Plik został przesłany pomyślnie!");
+            router.push("/visualize");
         } catch (error) {
-            alert("Wystąpił błąd podczas przesyłania pliku.");
+            console.log("Wystąpił błąd podczas przesyłania pliku.");
         } finally {
             setUploading(false);
         }
