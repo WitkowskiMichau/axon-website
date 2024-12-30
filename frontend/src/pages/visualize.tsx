@@ -3,11 +3,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Tips from "@/components/Tips";
 import VisualizationSection from "@/components/VisualizationSection";
-import { TipsData1, TipsData2, tipsData } from "@/data/MockData";
+import { TipsData1, TipsData2 } from "@/data/MockData";
 import RevenueTrendChart from "@/components/RevenueTrendChart";
 import TipsSmall from "@/components/TipsSmall";
 import useSWR from "swr";
 import fetcher from "@/utils/fetcher";
+import tips from "@/components/Tips";
 
 interface Revenue {
     date: string;
@@ -21,6 +22,7 @@ const Visualize: React.FC = () => {
         averageSourceValue: { leadSource: string; value: number }[];
         conversionRateData: { leadSource: string; value: number }[];
         revenueOverTimeData: Revenue[];
+        tips: string[];
     } | null>(null);
 
     const { data, error, isValidating } = useSWR("http://localhost:8000/api/lps/upload", fetcher, {
@@ -30,19 +32,20 @@ const Visualize: React.FC = () => {
 
     const processData = useCallback(() => {
         if (data) {
-            console.log('Dane z SWR:', data);
 
-            const averageSourceValue = Object.keys(data.averageSourceValue).map((source) => ({
+            const { processedData, tips } = data;
+
+            const averageSourceValue = Object.keys(processedData.averageSourceValue).map((source) => ({
                 leadSource: source,
-                value: data.averageSourceValue[source],
+                value: processedData.averageSourceValue[source],
             }));
 
-            const conversionRateData = Object.keys(data.conversionEfficiency).map((source) => ({
+            const conversionRateData = Object.keys(processedData.conversionEfficiency).map((source) => ({
                 leadSource: source,
-                value: data.conversionEfficiency[source],
+                value: processedData.conversionEfficiency[source],
             }));
 
-            const revenueOverTimeData = data.revenueOverTime.map((item: Revenue) => ({
+            const revenueOverTimeData = processedData.revenueOverTime.map((item: Revenue) => ({
                 date: item.date,
                 leadSource: item.leadSource,
                 revenue: item.revenue,
@@ -52,7 +55,8 @@ const Visualize: React.FC = () => {
             setVisualizations({
                 averageSourceValue,
                 conversionRateData,
-                revenueOverTimeData
+                revenueOverTimeData,
+                tips
             });
         }
     }, [data]);
@@ -101,7 +105,7 @@ const Visualize: React.FC = () => {
                                 <TipsSmall tips={TipsData2} />
                             </div>
                         </div>
-                        <Tips tips={tipsData} />
+                        <Tips tips={visualizations.tips} />
                     </div>
                 )}
             </div>

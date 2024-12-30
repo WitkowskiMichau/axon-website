@@ -30,3 +30,7 @@ export interface ProcessedData {
     averageSourceValue: AverageSourceValue;
     conversionEfficiency: PercentageOfOverallWins;
 }
+
+export interface Tips {
+    tips: string[];
+}
