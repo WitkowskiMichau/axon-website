@@ -1,5 +1,6 @@
 import _ from "lodash";
 import { ExcelRow, ProcessedData, RevenueOverTimeItem } from "../types";
+import {parseDate} from "./dateParser";
 
 /**
  * Processes Excel data and converts it into a structured format for analysis.
@@ -11,7 +12,7 @@ export const processExcelData = (data: ExcelRow[]): ProcessedData => {
     const revenueOverTime: RevenueOverTimeItem[] = _(data)
         .filter((row: ExcelRow) => row["Conversion Status"] === "Won")
         .map((row: ExcelRow): RevenueOverTimeItem => ({
-            date: row.Date || "Unknown Date", // Ensure fallback for missing date
+            date: parseDate(row.Date), // Use the universal date parser
             leadSource: row["Lead Source"],
             revenue: row["Deal Amount"],
             description: `Lead source: ${row["Lead Source"]}, Client: ${row["Company Size"] || "Unknown"}`

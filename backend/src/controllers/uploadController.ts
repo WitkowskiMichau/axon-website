@@ -20,22 +20,18 @@ const uploadFile = (req: Request, res: Response): void => {
         const sheet = workbook.Sheets[sheetName];
         const data = XLSX.utils.sheet_to_json(sheet) as any[]; // Nie można przewidzieć struktury, więc `any[]`
 
-        console.log('Excel Data:', data);
-
         // Usunięcie pliku po przetworzeniu
         fs.unlinkSync(filePath);
 
-        // Walidacja danych z Excela
         if (!Array.isArray(data) || data.length === 0) {
             res.status(400).json({ message: 'Invalid or empty Excel data' });
             return;
         }
 
-        // Przetwarzanie danych
         const result: ProcessedData = processExcelData(data);
 
         // Logowanie wyników i zwrócenie do frontendu
-        console.log("Processed data:", result);
+        console.log("Processed data:", result.revenueOverTime);
         res.status(200).json(result);
     } catch (error) {
         console.error('Error processing file:', error);
