@@ -7,60 +7,66 @@ const openai = new OpenAI({
 /**
  * Generate AI-powered sales tips based on processed data.
  * @param processedData Processed data object.
- * @returns Array of actionable tips.
+ * @returns Array of actionable tips with title and description.
  */
-export const generateTips = async (processedData: any): Promise<string[]> => {
+export const generateTips = async (
+    processedData: {
+        averageSourceValue: Record<string, number>;
+        conversionEfficiency: Record<string, number>;
+        revenueOverTime: { date: string; leadSource: string; revenue: number; description: string }[];
+    }
+): Promise<{ title: string; description: string, data: string }[]> => {
     if (!processedData || Object.keys(processedData).length === 0) {
         throw new Error("Processed data is invalid or empty.");
     }
 
-    // Craft the best possible prompt for OpenAI
+    // Craft the prompt to request valid JSON output
     const prompt = `
-You are a highly advanced AI trained to analyze business performance data and provide actionable insights that empower sales teams and decision-makers to maximize revenue and optimize strategies.
+You are a highly advanced AI trained to analyze sales performance data and provide actionable insights for sales professionals to maximize revenue and optimize their strategies.
 
-### Here is the performance data for analysis:
+### Data for Analysis:
 - **Average Source Value (USD)**:
 ${JSON.stringify(processedData.averageSourceValue, null, 2)}
-
 - **Conversion Efficiency (%)**:
 ${JSON.stringify(processedData.conversionEfficiency, null, 2)}
-
 - **Revenue Over Time**:
 ${processedData.revenueOverTime.map(
-        (item: any) =>
+        (item) =>
             `Date: ${item.date}, Source: ${item.leadSource}, Revenue: ${item.revenue}, Description: ${item.description}`
     ).join("\n")}
 
 ### Task:
-Using the provided data, generate actionable growth strategies tailored for sales teams. Focus on:
-1. Identifying and prioritizing the highest-performing lead sources and recommending strategies to enhance their success further.
-2. Suggesting specific improvements or optimizations for underperforming lead sources to maximize ROI.
-3. Highlighting potential patterns, seasonal trends, or missed opportunities that could be leveraged for growth.
-4. Identifying underutilized channels or emerging trends that may yield untapped potential.
+Analyze the provided data and generate **14 to 16 tips** that offer actionable insights tailored for sales professionals. Ensure tips are concise, actionable, and data-driven. Organize tips into the following **categories**:
+1. **High-Performing Sources**: Recommendations to scale successful channels.
+2. **Underperforming Sources**: Strategies to improve low-performing channels.
+3. **Trends and Opportunities**: Insights on seasonal patterns, emerging trends, or missed opportunities.
+4. **Cost-Effectiveness Strategies**: Guidance on improving ROI or optimizing resource allocation.
+5. highlighted the worst performing source search the web and propose improvements or suggest resigning from actions related to that data source
 
 ### Requirements:
-- Provide **three to five actionable tips** in the following format:
-  - Tip 1: [A concise and specific recommendation.]
-  - Tip 2: [A strategy or insight with actionable guidance.]
-  - Tip 3: [An observation, trend, or opportunity.]
-  - Tip 4 (optional): [A suggestion for leveraging untapped or emerging lead sources.]
-  - Tip 5 (optional): [A recommendation for improving cost-effectiveness or efficiency.]
-
-**Each tip must be:**
-- Clear, actionable, and relevant to sales and business stakeholders.
-- No more than two sentences.
-- Based entirely on the data provided.
+- Each tip must include:
+  - A **title** summarizing the insight and have a number mentioned in description if possible (4-8 words) .
+  - A **description** with clear, actionable advice (max 2 sentences).
+  - A **data** Every tip should be based on data strictly from the file dot should refer to data and show specific number which it refers to.
+- Output the response **strictly as a valid JSON array** in the following format:
+[
+  { "title": "Tip Title", "description": "Tip Description", "data": "Data Reference" },
+  { "title": "Tip Title", "description": "Tip Description", "data": "Data Reference" }
+]
 `;
 
     try {
         const response = await openai.chat.completions.create({
             model: "gpt-4",
             messages: [
-                { role: "system", content: "You are a helpful assistant for sales optimization." },
-                { role: "user", content: prompt },
+                {
+                    role: "system",
+                    content: "You are a helpful assistant specializing in sales strategy and data-driven insights."
+                },
+                {role: "user", content: prompt},
             ],
-            max_tokens: 500, // Increased token limit for more detailed responses
-            temperature: 0.7, // Balance between creativity and focus
+            max_tokens: 1000, // Adjust for expected response length
+            temperature: 0.7, // Balance creativity and precision
         });
 
         const rawText = response.choices[0]?.message?.content;
@@ -69,14 +75,55 @@ Using the provided data, generate actionable growth strategies tailored for sale
             throw new Error("OpenAI response is empty or invalid.");
         }
 
-        // Extract tips from the response
-        return rawText
-            .split("\n")
-            .map((tip) => tip.trim())
-            .filter((tip) => tip.toLowerCase().startsWith("tip")); // Ensure proper formatting
-    } catch (error) {
-        console.error("Error generating AI tips:", error);
-        throw new Error("Failed to generate AI tips. Please try again later.");
+        // Log the raw response for debugging
+        console.log("Raw OpenAI response:", rawText);
+
+        // Validate and parse the response
+        try {
+            const tips = JSON.parse(rawText.trim());
+
+            if (!Array.isArray(tips)) {
+                throw new Error("Response is not a valid JSON array.");
+            }
+
+            return tips.map((tip: any) => ({
+                title: tip.title,
+                description: tip.description,
+                data: tip.data,
+            }));
+        } catch (parseError) {
+            console.error("Error parsing OpenAI response:", parseError);
+            console.error("Raw OpenAI response:", rawText);
+
+            // Return fallback tips if parsing fails
+            return [
+                {
+                    title: "Parsing Error",
+                    description: "Failed to parse the AI response. Please try again later or contact support.",
+                    data: ''
+                },
+            ];
+        }
+    } catch (error: unknown) {
+        if (error instanceof Error) {
+            console.error("Error generating AI tips:", error.message);
+            return [
+                {
+                    title: "Error Generating Tips",
+                    description: "There was an issue generating tips. Please try again later.",
+                    data: ''
+                },
+            ];
+        } else {
+            console.error("Unexpected error:", error);
+            return [
+                {
+                    title: "Unexpected Error",
+                    description: "An unknown error occurred. Please contact support.",
+                    data: ''
+                },
+            ];
+        }
     }
 };
 

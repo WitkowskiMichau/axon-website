@@ -32,5 +32,7 @@ export interface ProcessedData {
 }
 
 export interface Tips {
-    tips: string[];
+    title: string;
+    description: string;
+    data: string;
 }

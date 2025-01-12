@@ -33,7 +33,7 @@ const DragAndDrop = () => {
 
     const handleUpload = async () => {
         if (!file) {
-            console.log("Wybierz plik przed uploadem!");
+            console.log("Please select a file before uploading!");
             return;
         }
 
@@ -41,26 +41,30 @@ const DragAndDrop = () => {
 
         try {
             await uploadFile(file);
-            console.log("Plik został przesłany pomyślnie!");
+            console.log("File uploaded successfully!");
             router.push("/visualize");
         } catch (error) {
-            console.log("Wystąpił błąd podczas przesyłania pliku.");
+            console.log("An error occurred while uploading the file.");
         } finally {
             setUploading(false);
         }
     };
 
     return (
-        <div className="flex flex-col items-center justify-center border-dashed border-2 border-gray-400 rounded-lg p-6 bg-gray-800 text-gray-200">
+        <div className="flex flex-col items-center justify-center border-dashed border-2 border-primaryYellow rounded-lg p-8 bg-gradient-to-r from-darkBlue to-gray-800 text-gray-100 shadow-lg">
+            <h2 className="text-2xl font-bold text-primaryYellow mb-4">Upload Your Data</h2>
+            <p className="text-sm text-gray-300 mb-6 text-center">
+                Drag and drop your file below, or click to select a file. Supported formats: <b>CSV, Excel</b>.
+            </p>
             <div
                 onDragOver={handleDragOver}
                 onDragLeave={handleDragLeave}
                 onDrop={handleDrop}
-                className={`w-full h-32 flex items-center justify-center ${
-                    isDragging ? "border-yellow-500 bg-gray-800" : "border-gray-400"
-                } border-dashed rounded-lg`}
+                className={`w-full h-40 flex items-center justify-center ${
+                    isDragging ? "bg-yellow-600 border-yellow-400" : "bg-gray-700 border-gray-500"
+                } border-dashed rounded-lg transition-colors duration-300`}
             >
-                <p>{isDragging ? "Upuść plik tutaj" : "Przeciągnij i upuść plik lub kliknij poniżej"}</p>
+                <p className="text-gray-300">{isDragging ? "Release to upload your file" : "Drag and drop a file here"}</p>
             </div>
             <input
                 type="file"
@@ -70,18 +74,23 @@ const DragAndDrop = () => {
             />
             <label
                 htmlFor="file-upload"
-                className="mt-4 text-blue-400 underline cursor-pointer"
+                className="mt-4 text-primaryYellow underline cursor-pointer"
             >
-                Wybierz plik
+                Select a file
             </label>
-            {file && <p className="mt-2 text-sm">{file.name}</p>}
+            {file && <p className="mt-2 text-sm text-gray-300">{file.name}</p>}
             <button
                 onClick={handleUpload}
-                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:bg-gray-600"
-                disabled={uploading}
+                className={`mt-6 px-6 py-2 font-semibold rounded-lg transition-all duration-300 ${
+                    !file || uploading
+                        ? "bg-gray-600 text-gray-400 cursor-not-allowed"
+                        : "bg-primaryYellow text-darkBlue hover:bg-yellow-400"
+                }`}
+                disabled={!file || uploading}
             >
-                {uploading ? "Przesyłanie..." : "Wyślij"}
+                {uploading ? "Uploading..." : "Upload"}
             </button>
+            <p className="text-sm text-gray-400 mt-4">Your data is secure and private.</p>
         </div>
     );
 };

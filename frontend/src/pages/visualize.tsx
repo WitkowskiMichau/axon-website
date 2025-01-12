@@ -9,6 +9,7 @@ import TipsSmall from "@/components/TipsSmall";
 import useSWR from "swr";
 import fetcher from "@/utils/fetcher";
 import tips from "@/components/Tips";
+import TipsSection from "@/components/TipsSection";
 
 interface Revenue {
     date: string;
@@ -77,12 +78,12 @@ const Visualize: React.FC = () => {
                     by each lead channel to prioritize the strategies that generate the most significant impact.
                 </p>
                 {visualizations && (
-                    <div className="mt-8">
+                    <>
                         <RevenueTrendChart data={visualizations.revenueOverTimeData} />
                         <div className="flex flex-wrap justify-between">
-                            <div className="w-full md:w-1/2 p-4">
+                            <div className="w-full md:w-1/2 p-4 pt-9 pb-9">
                                 <VisualizationSection
-                                    title="Average source value "
+                                    title=""
                                     description=""
                                     data={visualizations.averageSourceValue}
                                     valueKey="totalRevenue"
@@ -90,11 +91,10 @@ const Visualize: React.FC = () => {
                                     chartType="bar"
                                     unit={"USD"}
                                 />
-                                <TipsSmall tips={TipsData1} />
                             </div>
                             <div className="w-full md:w-1/2 p-4">
                                 <VisualizationSection
-                                    title="Lead Source Conversion Efficiency"
+                                    title=""
                                     description=""
                                     data={visualizations.conversionRateData}
                                     valueKey="conversionRate"
@@ -102,13 +102,14 @@ const Visualize: React.FC = () => {
                                     chartType="bar"
                                     unit={"%"}
                                 />
-                                <TipsSmall tips={TipsData2} />
                             </div>
                         </div>
-                        <Tips tips={visualizations.tips} />
-                    </div>
+                        <h2 className="text-3xl font-bold text-primaryYellow mb-6">Sales Growth Tips</h2>
+                        <TipsSection tips={visualizations?.tips || []} />
+                    </>
                 )}
             </div>
+
             <Footer />
         </div>
     );
