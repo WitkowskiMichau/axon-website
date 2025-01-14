@@ -3,7 +3,7 @@ import tsconfigPaths from 'postcss-tsconfig-paths';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 
-/** @type {import('postcss-load-config').Config} */
+/** @types {import('postcss-load-config').Config} */
 const config = {
   plugins: [
     postcssImport,

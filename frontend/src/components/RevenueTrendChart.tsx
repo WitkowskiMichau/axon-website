@@ -91,7 +91,7 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
         plugins: {
             legend: {
                 display: true,
-                position: 'top' as const, // Corrected position type
+                position: 'top' as const, // Corrected position types
                 labels: {
                     textDecoration: 'none',
                     generateLabels: (chart) => {
@@ -116,7 +116,7 @@ const RevenueTrendChart: React.FC<RevenueTrendChartProps> = ({ data }) => {
                 },
             },
             tooltip: {
-                mode: 'index' as const, // Corrected mode type
+                mode: 'index' as const, // Corrected mode types
                 intersect: false,
                 callbacks: {
                     label: (context) => {

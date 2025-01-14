@@ -26,7 +26,7 @@ const Visualize: React.FC = () => {
         tips: string[];
     } | null>(null);
 
-    const { data, error, isValidating } = useSWR("http://localhost:8000/api/lps/upload", fetcher, {
+    const { data } = useSWR("/api/upload", fetcher, {
         revalidateOnFocus: false,
         shouldRetryOnError: true,
     });
